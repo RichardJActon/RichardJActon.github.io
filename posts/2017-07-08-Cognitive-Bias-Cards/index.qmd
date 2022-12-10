@@ -1,7 +1,10 @@
 ---
-layout: post
 title: Cognitive Bias Cards!
-strand: rat
+description: "Check out the [Cognitive Bias Cards Repo](https://github.com/RichardJActon/CognitiveBiasCards) for a deck of cards featuring 104 cognitive biases."
+author: "Richard J. Acton"
+date: "2017-07-08"
+categories:
+  - rationalism
 ---
 
 Check out the [Cognitive Bias Cards Repo](https://github.com/RichardJActon/CognitiveBiasCards) for a deck of cards featuring 104 cognitive biases.

@@ -1,7 +1,11 @@
 ---
-layout: post
 title: Xenothesis
-strand: books
+description: "The Xenothesis Podcast, our podcast about Octavia E. Butler's Xenogenesis trilogy"
+author: "Richard J. Acton"
+date: "2021-10-06"
+categories:
+  - books
+  - podcasts
 ---
 
 I have a Podcast with my friend Michael Glinka, It's called [Xenothesis](https://www.xenothesis.com).

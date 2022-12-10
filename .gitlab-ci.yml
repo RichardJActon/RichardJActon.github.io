@@ -2,11 +2,31 @@ variables:
   GIT_STRATEGY: fetch
   GIT_SSL_NO_VERIFY: "true"
   GIT_LFS_SKIP_SMUDGE: 1
+#  PANDOC_VERSION: 'latest'
+
+cache: &renv_cache
+  key: renv
+  paths:
+    - renv/
+  policy: pull-push
+
+cache: &bookdown_cache
+  key: bookdown
+  paths:
+    - _site/
+  policy: pull-push
 
 stages:
   - build
+  - deploy
 
 image_build:
+  # cache:
+    # inherit all global cache settings
+   # <<: *renv_cache
+    # override the policy
+    # policy: pull-push
+   # <<: *bookdown_cache
   stage: build
   image: docker:stable
   before_script:
@@ -15,3 +35,84 @@ image_build:
     CI_COMMIT_SHA_7=$(echo $CI_COMMIT_SHA | cut -c1-7)
     docker build --tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7 .
     docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA_7
+  except:
+    variables:
+      - $CI_PROJECT_URL == $GITLAB_MIRROR
+  tags:
+    - image-build
+
+book_build:
+  stage: build
+  image: rocker/r-ver:4.2.0
+  cache:
+    # inherit all global cache settings
+    <<: *renv_cache
+    <<: *bookdown_cache
+  script: |
+    DEBIAN_FRONTEND=noninteractive apt-get update
+    DEBIAN_FRONTEND=noninteractive apt-get install -y -q \
+      curl \
+      jq \
+      libx11-6 \
+      libxss1 \
+      libxt6 \
+      libxext6 \
+      libsm6 \
+      libice6 \
+      xdg-utils \
+      librsvg2-2 \
+      librsvg2-dev \
+      librsvg2-common
+
+    # pandoc
+    PANDOC_VERSION=$(curl -s https://api.github.com/repos/jgm/pandoc/releases/latest | jq -r ".tag_name")
+    PANDOC_FILE=$(printf "pandoc-%s-1-amd64.deb" $PANDOC_VERSION)
+    PANDOC_URL=$(printf "https://github.com/jgm/pandoc/releases/download/%s/%s" $PANDOC_VERSION $PANDOC_FILE)
+    echo "Downloading R .deb from: ${PANDOC_URL}"
+    curl -L -o $PANDOC_FILE $PANDOC_URL
+    DEBIAN_FRONTEND=noninteractive apt-get install -y -q -f ./$PANDOC_FILE
+    rm $PANDOC_FILE
+
+    # quarto
+    QUARTO_VERSION=$(curl -s https://api.github.com/repos/quarto-dev/quarto-cli/releases/latest | jq -r ".tag_name")
+    QUARTO_VERSION="${QUARTO_VERSION:1}"
+    QUARTO_FILE=$(printf "quarto-%s-linux-amd64.deb" $QUARTO_VERSION)
+    QUARTO_URL=$(printf "https://github.com/quarto-dev/quarto-cli/releases/download/v%s/%s" $QUARTO_VERSION $QUARTO_FILE)
+    # https://github.com/quarto-dev/quarto-cli/releases/download/v1.2.269/quarto-1.2.269-linux-amd64.deb
+    echo "Downloading .deb from: ${QUARTO_URL}"
+    curl -L -o $QUARTO_FILE $QUARTO_URL
+    DEBIAN_FRONTEND=noninteractive apt-get install -y -q -f ./$QUARTO_FILE
+    rm $QUARTO_FILE
+
+    # NB this will need to change if the Renv version in the project is updated - automate this? get renv version from the lock file, check if latest cran then archive?
+    # also remember that the latest source on CRAN has a different path to the archived versions e.g. https://cran.r-project.org/src/contrib/renv_0.16.0.tar.gz
+    Rscript --vanilla -e "install.packages('https://cran.r-project.org/src/contrib/00Archive/renv/renv_0.15.5.tar.gz', repos = NULL, type = 'source')"
+    R -e "renv::activate()"
+    R -e "renv::restore()"
+    R -e "tinytex::install_tinytex()"
+    set -ev
+    quarto render
+    # Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
+    # Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
+    # Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::epub_book')"
+  only:
+    variables:
+      - $CI_PROJECT_URL == $GITLAB_MIRROR
+  artifacts:
+    paths:
+      - _book
+
+pages:
+  stage: deploy
+  image: alpine:latest
+  cache:
+    <<: *bookdown_cache
+  script:
+    - mv ./_site ./public
+  artifacts:
+    paths:
+      - public
+  only:
+    variables:
+      - $CI_PROJECT_URL == $GITLAB_MIRROR
+

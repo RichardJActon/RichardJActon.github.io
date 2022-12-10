@@ -1,7 +1,10 @@
 ---
-layout: post
 title: My First First Author paper!
-strand: publications
+description: "The genomic loci of specific human tRNA genes exhibit ageing-related DNA hypermethylation"
+author: "Richard J. Acton"
+date: "2021-10-06"
+categories:
+  - publications
 ---
 
 I published my first first author paper: [The genomic loci of specific human tRNA genes exhibit ageing-related DNA hypermethylation

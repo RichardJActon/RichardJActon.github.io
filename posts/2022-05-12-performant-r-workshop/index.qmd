@@ -1,0 +1,15 @@
+---
+title: Performant R - how to do things faster in R
+description: "My workshop on writing more performant R code"
+author: "Richard J. Acton"
+date: "2022-05-12"
+categories:
+  - R
+---
+
+I recently ran a workshop on writing performant R code you can find the slides at [Performant R](https://richardjacton.github.io/performantR/Performant_R.html).
+
+I took a very wide overview of the subject covering profiling and benchmarking, vectorising, parallelism, Rcpp, and working with larger than memory datasets as well as caching of computationally results with compressed data object outputs and pipeline managment tools.
+There are links to further reading/watching in the presenter notes and the [gitlab repo](https://renkulab.io/gitlab/racton/performantR).
+
+[UPDATE 2022-11-12] I ran an extended version of this workshop at the Babraham institute and migrated the code to [Renku](https:renkulab.io) so that you can spin up an R environment to follow along with the exercises in the cloud of in a local container see the [Renku project page](https://renkulab.io/projects/racton/performantR).

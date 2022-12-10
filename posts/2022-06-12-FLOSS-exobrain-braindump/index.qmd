@@ -1,7 +1,11 @@
 ---
-layout: post
 title: FLOSS Exobrains Braindump
-strand: rat
+description: "Free/libre and Open Source 'Exobrain' tools for notes, to do, task management etc."
+author: "Richard J. Acton"
+date: "2022-06-12"
+categories:
+  - rat
+  - FLOSS
 ---
 
 I set myself the constraint of using of Free/Libre and open source (FLOSS) software tools for the task of creating an exobrain. 
@@ -37,6 +41,8 @@ These are tools which facilitate building an exobrain on your own private cloud 
 	- [Carnet](https://apps.nextcloud.com/apps/carnet) a google keep-like Nextcloud note app 
 	- **[Joplin](https://joplinapp.org/)** - markdown based notes app (web/desktop/mobile), cloud hosted option or many other could sync options including nextcloud, quick grab browser plugins
 	- [tiddlywiki](https://tiddlywiki.com/index.html) A non-linear personal notebook in the form of a WIKI, local or hostable
+	- [focalboard](https://www.focalboard.com/) notion-like
+	- [appflowy](https://appflowy.io/) notion-like
 	- [minder](https://github.com/phase1geo/minder/) for fans of mind mapping
 	- [Dendron](https://www.dendron.so/) for VScode/([VScodium](https://itsfoss.com/vscodium/)) aficionados
 	- [Zotero](https://www.zotero.org/) Ideal for academics who need a reference manager, supports notes and PDF annotations tags etc.  has many integrations including with logseq. This make a good supplement to a notes system for managing source materials that you reference in your notes. It also has a built in feed reader which facilitates the import of new articles ets. into your library. For biosciences people this pairs nicely with the feature in [PubMed](https://pubmed.ncbi.nlm.nih.gov/) that lets you turn any search into an RSS feed (just click the create rss button under the search box). There is a web version with a nice sharing feature.
@@ -56,6 +62,7 @@ These are tools which facilitate building an exobrain on your own private cloud 
 	- **[bitwarden](https://bitwarden.com/)** 
 		- cloud based password manager with a self-hostable option, very featureful
 	- **[keepass](https://keepass.info/)**
+		- see [keepassxc](https://keepassxc.org/project/) for a better frontend
 	- _NOT FULLY OPEN_ but get some **[Yubikeys](https://www.yubico.com/)** to use as your Second factor in multi factor authentication, this is better than TOTP codes. (avoid SMS 2FA if at all possible, number spoofing is an issue)
 - (Specially for data science types) 
 	- If you need a collaborative environment for analysis/development with reproducible containerised computation in Python/R (with jupyter/Rstudio) and dataset sharing, gitlab integrations and git-lfs then [Renku](https://renkulab.io/) is for you 

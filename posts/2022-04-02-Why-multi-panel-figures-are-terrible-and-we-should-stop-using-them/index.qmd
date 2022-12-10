@@ -1,7 +1,10 @@
 ---
-layout: post
 title: Why multi-panel figures are terrible & we should stop using them.
-strand: litsci
+description: "My problems with multipanel figure and why I think they are an inefficent way of communicating scientific results, a problem for accessibility, and proposals for testing these ideas"
+author: "Richard J. Acton"
+date: "2022-04-02"
+categories:
+  - literate science
 ---
 
 We need to talk about Multi-panel figures. To start with let us consider what information do you usually need to interpret a panel in a 'figure'?

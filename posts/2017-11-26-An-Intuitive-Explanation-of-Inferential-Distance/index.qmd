@@ -1,26 +1,31 @@
 ---
-strand: rat
+title: An intuitive explanation of inferential distance
+description: "Explaining the concept of inferential distance, the distance between different beliefs in units of logical steps"
+author: "Richard J. Acton"
+date: "2017-11-26"
+categories:
+  - rationalism
 ---
 
 Let us represent our beliefs as nodes in a network. Most nodes in your network of beliefs have dependencies, they are connected to other beliefs the truth value of which they are contingent on.
 
 Picture a subset of your network of beliefs, let us take a simplified section that looks like a tree, stripping away the complex interconnections to aid in visualization. 
 
-Beliefs B and C are predicated on belief A, beliefs D and E on belief B, and beliefs F and G on belief C. Thus belief A is need for beliefs B and C, belief B for D and E, and C for F and G. (see the [figure](https://raw.githubusercontent.com/RichardJActon/RichardJActon.github.io/master/images/inferencialDistance.png))
+Beliefs B and C are predicated on belief A, beliefs D and E on belief B, and beliefs F and G on belief C. Thus belief A is need for beliefs B and C, belief B for D and E, and C for F and G. (see the [figure](inferencialDistance.png))
 
-![](https://raw.githubusercontent.com/RichardJActon/RichardJActon.github.io/master/images/inferencialDistance.png)
+![](inferencialDistance.png)
 
 ---
 
-__The One:__ Apples grow on trees - lets us call this belief F.
+**The One:** Apples grow on trees - lets us call this belief F.
 
-__The Other:__ What are trees? and why are you labeling your beliefs with letters?
+**The Other:** What are trees? and why are you labeling your beliefs with letters?
 
 *The one is trying to convince the other of F but the other lacks belief C (the belief in trees), the one is unable to successfully graft the branch of their tree containing F onto the other's tree as their is no suitable node at which to affix it.*
 
 *The one must then traverse back down their tree to node C and first convince the other of C. The one made the mistake of thinking the inferential distance between themself and the other was but 1 node when in actuality it was 2. The one must convince the other not merely that apples grow on trees but must also introduce the concept of trees.*
 
-__The One:__ Trees are large upright plants with stiff bodies due in part to large amounts of lignin in some of their cell walls, a property not shared by they bendier cousins. There is one over their with apples growing on it. *(points to a nearby apple tree)*
+**The One:** Trees are large upright plants with stiff bodies due in part to large amounts of lignin in some of their cell walls, a property not shared by they bendier cousins. There is one over their with apples growing on it. *(points to a nearby apple tree)*
 
 ---
 
@@ -30,13 +35,12 @@ There is a distinction to be drawn between adding a new node to an interlocutor'
 
 ---
 
-__The Other:__ There is not such thing as trees.
+**The Other:** There is not such thing as trees.
 
-__The One:__ let us call that belief C', What then is yonder plant with apples growing on it? *(points to a nearby apple tree)*
+**The One:** let us call that belief C', What then is yonder plant with apples growing on it? *(points to a nearby apple tree)*
 
-__The Other:__ That is just an unusually large fern.
-
-__The One:__ *sigh*
+**The Other:** That is just an unusually large fern.
+**The One:** *sigh*
 
 *The Other believes C' which they are aware is mutually exclusive with C.*
 

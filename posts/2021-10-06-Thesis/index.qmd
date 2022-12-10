@@ -1,7 +1,10 @@
 ---
-layout: post
-title: Thesis
-strand: publications
+title: PhD Thesis
+description: "My PhD Thesis"
+author: "Richard J. Acton"
+date: "2021-10-06"
+categories:
+  - publications
 ---
 
 Now that my [PhD Thesis](https://richardjacton.github.io/thesis/) is available online I thought I would update my blog to point to it in case anyone want to read it.
