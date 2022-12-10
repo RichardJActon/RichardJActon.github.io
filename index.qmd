@@ -1,5 +1,5 @@
 ---
-title: "Pan narrans"
+title: "*Pan narrans* - Richard J. Acton's Blog"
 listing:
   contents: posts
   sort: "date desc"
