@@ -15,6 +15,12 @@
       "Source": "Repository",
       "Repository": "RSPM",
       "Requirements": []
+    },
+    "tinytex": {
+      "Package": "tinytex",
+      "Version": "0.40",
+      "Source": "Repository",
+      "Requirements": []
     }
   }
 }
