@@ -100,7 +100,7 @@ book_build:
       - $CI_PROJECT_URL == $GITLAB_MIRROR
   artifacts:
     paths:
-      - _book
+      - _site
 
 pages:
   stage: deploy
