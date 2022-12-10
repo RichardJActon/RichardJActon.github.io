@@ -19,7 +19,7 @@ format:
   html:
     theme: 
       dark: cyborg
-      light: cosmo
+      light: [custom.scss cosmo]
     css: styles.css
 
 
