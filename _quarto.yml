@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Pan narrans"
+  title: "*Pan narrans* - the story telling ape"
   search: 
     location: navbar
     type: overlay
