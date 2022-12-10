@@ -1,0 +1,12 @@
+---
+layout: post
+title: Xenothesis
+strand: books
+---
+
+I have a Podcast with my friend Michael Glinka, It's called [Xenothesis](https://www.xenothesis.com).
+In it Michael reads Octavia E. Butler's Xenogenesis trilogy (alternatively known as Lilith's brood) for the first time and we discuss the books including any scientific topics, especially biological one that come up.
+I regard Xenogenesis as essential sci-fi for anyone working in the biological sciences.
+
+We have also done two special episodes one discussing [cyberpunk](https://www.xenothesis.com/20_cyberpunk_special/) and on [GATTACA](https://www.xenothesis.com/25_gattaca_special/https://www.xenothesis.com/20_cyberpunk_special/).
+
