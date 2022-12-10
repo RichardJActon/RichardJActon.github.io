@@ -1,0 +1,33 @@
+{
+  "@renku_data_type": "renku.domain_model.project.Project",
+  "@renku_oid": "project",
+  "agent_version": "1.10.0",
+  "annotations": [],
+  "automated_update": true,
+  "creator": {
+    "@renku_data_type": "renku.domain_model.provenance.agent.Person",
+    "@renku_data_value": {
+      "affiliation": null,
+      "alternate_name": null,
+      "email": "racton@uni-koeln.de",
+      "id": "mailto:racton@uni-koeln.de",
+      "name": "Richard James Acton"
+    }
+  },
+  "date_created": {
+    "@renku_data_type": "datetime.datetime",
+    "@renku_data_value": "2022-12-10T12:56:39+00:00"
+  },
+  "description": "",
+  "id": "/projects/racton/pan-narrans-blog",
+  "immutable_template_files": [],
+  "keywords": [],
+  "minimum_renku_version": "1.7.0",
+  "name": "pan-narrans-blog",
+  "template_id": "Renv",
+  "template_metadata": "{\"__template_source__\": \"https://github.com/RichardJActon/contributed-project-templates\", \"__template_ref__\": \"main\", \"__template_id__\": \"Renv\", \"__namespace__\": \"racton\", \"__automated_update__\": true, \"__repository__\": \"https://renkulab.io/gitlab\", \"__sanitized_project_name__\": \"pan-narrans-blog\", \"__project_slug__\": \"racton/pan-narrans-blog\", \"__project_description__\": \"\", \"__renku_version__\": \"1.10.0\", \"name\": \"pan-narrans-blog\", \"__name__\": \"pan-narrans-blog\", \"__template_version__\": \"2ae0d3392554743d86d6b8c5327efaaaf59bcc6e\"}",
+  "template_ref": "main",
+  "template_source": "https://github.com/RichardJActon/contributed-project-templates",
+  "template_version": "2ae0d3392554743d86d6b8c5327efaaaf59bcc6e",
+  "version": 9
+}
