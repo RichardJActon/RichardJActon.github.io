@@ -3,6 +3,13 @@ project:
 
 website:
   title: "*Pan narrans* - the story telling ape"
+  site-url: "https://richardjacton.github.io"
+  open-graph: true
+  twitter-card:
+    creator: "@richardjacton@scholar.social"
+  comments: 
+    hypothesis:
+      theme: clean
   search: 
     location: navbar
     type: overlay
