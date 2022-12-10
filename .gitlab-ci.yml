@@ -92,9 +92,6 @@ book_build:
     R -e "tinytex::install_tinytex()"
     set -ev
     quarto render
-    # Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::gitbook')"
-    # Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::pdf_book')"
-    # Rscript -e "bookdown::render_book('index.Rmd', 'bookdown::epub_book')"
   only:
     variables:
       - $CI_PROJECT_URL == $GITLAB_MIRROR
