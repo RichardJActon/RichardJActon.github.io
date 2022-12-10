@@ -1,0 +1,50 @@
+---
+title: "About"
+image: RJAsouthpark.png
+about:
+  template: jolla
+  links:
+    - icon: mastodon
+      text: Mastodon
+      href: https://scholar.social/@RichardJActon
+    - icon: github
+      text: Github
+      href: https://github.com/RichardJActon
+---
+
+# Richard J. Acton
+
+## CV
+
+[*Curriculum Vitae*](https://richardjacton.github.io/CV/RichardJActon_CV.html)
+
+## Contact me
+
+### <i class="bi bi-envelope-fill"> email 
+
+Personal
+
+<i class="bi bi-envelope-fill"></i> [richardjacton\@pan-narrans.xyz](mailto:richardjacton@pan-narrans.xyz)
+
+[*PGP: 96c20929fa88dd8992704df8975f133a9f96f86b*](https://raw.githubusercontent.com/RichardJActon/keys/master/publickey.richardjacton%40pm.me-96c20929fa88dd8992704df8975f133a9f96f86b.asc)
+
+Work
+
+<i class="bi bi-envelope-fill"></i> [Richard.Acton\@babraham.ac.uk](mailto:richardjacton@pan-narrans.xyz)
+
+*unencrypted, subject to FOI requests*
+
+### <i class="bi bi-chat-fill"></i> Messaging
+
+Decentralised, end-2-end encrypted & anonymous
+
+
+<i class="bi bi-chat-fill"></i> [Matrix](https://matrix.org/) ID: @richardjacton:matrix.org
+
+
+<i class="bi bi-chat-fill"></i> [Session](https://getsession.org/) ID: 051ebba96a4e385f16de4c1de30829202be5bdb5f539d790c7bc3e9b763e34b83c
+
+
+## Got Feedback for me?
+
+Met me? Worked with me? Interacted with me online? Got something complimentary constructively critical to offer? Leave it for me here: [admonymous.co/richardjacton](https://www.admonymous.co/richardjacton) (Anonymously unless you include personally identifiable info in you feedback), Thanks!
