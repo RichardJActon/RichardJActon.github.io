@@ -43,6 +43,7 @@ These are tools which facilitate building an exobrain on your own private cloud 
 	- [tiddlywiki](https://tiddlywiki.com/index.html) A non-linear personal notebook in the form of a WIKI, local or hostable
 	- [focalboard](https://www.focalboard.com/) notion-like
 	- [appflowy](https://appflowy.io/) notion-like
+	- [AFFiNE](https://affine.pro/) notion-like, some interesting UI innovations
 	- [minder](https://github.com/phase1geo/minder/) for fans of mind mapping
 	- [Dendron](https://www.dendron.so/) for VScode/([VScodium](https://itsfoss.com/vscodium/)) aficionados
 	- [Zotero](https://www.zotero.org/) Ideal for academics who need a reference manager, supports notes and PDF annotations tags etc.  has many integrations including with logseq. This make a good supplement to a notes system for managing source materials that you reference in your notes. It also has a built in feed reader which facilitates the import of new articles ets. into your library. For biosciences people this pairs nicely with the feature in [PubMed](https://pubmed.ncbi.nlm.nih.gov/) that lets you turn any search into an RSS feed (just click the create rss button under the search box). There is a web version with a nice sharing feature.
