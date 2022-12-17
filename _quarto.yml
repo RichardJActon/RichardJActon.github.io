@@ -8,8 +8,7 @@ website:
   twitter-card:
     creator: "@richardjacton@scholar.social"
   comments: 
-    hypothesis:
-      theme: clean
+    hypothesis: true
   search: 
     location: navbar
     type: overlay
