@@ -1,7 +1,9 @@
 ---
 title: Xenothesis
 description: "The Xenothesis Podcast, our podcast about Octavia E. Butler's Xenogenesis trilogy"
-author: "Richard J. Acton"
+author: 
+  - name: "Richard J. Acton"
+    orcid: 0000-0002-2574-9611
 date: "2021-10-06"
 categories:
   - books
@@ -12,5 +14,5 @@ I have a Podcast with my friend Michael Glinka, It's called [Xenothesis](https:/
 In it Michael reads Octavia E. Butler's Xenogenesis trilogy (alternatively known as Lilith's brood) for the first time and we discuss the books including any scientific topics, especially biological one that come up.
 I regard Xenogenesis as essential sci-fi for anyone working in the biological sciences.
 
-We have also done two special episodes one discussing [cyberpunk](https://www.xenothesis.com/20_cyberpunk_special/) and on [GATTACA](https://www.xenothesis.com/25_gattaca_special/https://www.xenothesis.com/20_cyberpunk_special/).
+We have also done two special episodes one discussing [cyberpunk](https://www.xenothesis.com/20_cyberpunk_special/) and on [GATTACA](https://www.xenothesis.com/25_gattaca_special/).
 

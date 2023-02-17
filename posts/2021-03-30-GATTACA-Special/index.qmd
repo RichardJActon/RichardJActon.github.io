@@ -1,0 +1,13 @@
+---
+title: GATTACA Special Episode
+description: "A special episode of the Xenothesis podcast discussing the 1997 film GATTACA with Michael Glinka"
+author: 
+  - name: "Richard J. Acton"
+    orcid: 0000-0002-2574-9611
+date: "2021-01-03"
+categories:
+  - podcasts
+---
+
+Episode 25 of Xenothesis, the podcast I cohost with my friend Michael Glinka is a [special episode on the 1997 film GATTACA](https://www.xenothesis.com/25_gattaca_special/) 
+
