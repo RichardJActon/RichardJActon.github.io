@@ -10,6 +10,8 @@ categories:
   - FLOSS
 ---
 
+![brain-1 icon by Servier https://smart.servier.com/ is licensed under CC-BY 3.0 Unported https://creativecommons.org/licenses/by/3.0/](brain-1.svg){width=180px}
+
 I set myself the constraint of using of Free/Libre and open source (FLOSS) software tools for the task of creating an exobrain. 
 
 Here are some of the tool's I've considered and in some case am using to do this. First Why  did I impose this constraint? I regard it as as an essential feature of a exobrain that it can be private, secure and will always accessible to me in an open an interoperable format into the future. This way you can own the data in your exobrain and still have access to it if the company that makes the product/service that you are using goes out of business. I have philosophical and ethical problems with proprietary software (see: [GNU philosophy](https://www.gnu.org/philosophy/)) & consider a right to privacy to be of fundamental political importance (see: [Privacy is Power](https://openlibrary.org/works/OL24353841W/Privacy_is_Power).
