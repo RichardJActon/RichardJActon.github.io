@@ -9,5 +9,7 @@ categories:
   - podcasts
 ---
 
+![progression of siluettes from and infant to an old man](aging_vector_thumb.svg){width=180px}
+
 Episode 53 of Xenothesis the podcast I cohost with my friend Michael Glinka is a [special episode on Ageing & Immortality](https://www.xenothesis.com/53_xenogenesis_ageing_and_immortality_special/)
 
