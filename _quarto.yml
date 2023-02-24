@@ -21,6 +21,9 @@ website:
         href: https://scholar.social/@RichardJActon
       - icon: rss
         href: index.xml
+  page-footer: 
+    center:
+      - text: '<a rel="me" href="https://fosstodon.org/@RichardJActon">Mastodon</a>'
 format:
   html:
     theme: 
