@@ -6,7 +6,7 @@ about:
   links:
     - icon: mastodon
       text: Mastodon
-      href: https://scholar.social/@RichardJActon
+      href: https://fosstodon.org/@RichardJActon
     - icon: github
       text: Github
       href: https://github.com/RichardJActon
@@ -52,6 +52,5 @@ Decentralised, end-2-end encrypted & anonymous
 Met me? Worked with me? Interacted with me online? Got something complimentary constructively critical to offer? Leave it for me here: [admonymous.co/richardjacton](https://www.admonymous.co/richardjacton) (Anonymously unless you include personally identifiable info in you feedback), Thanks!
 
 
-<a rel="me" href="https://scholar.social/@RichardJActon">Mastodon</a>
-
+<a rel="me" href="https://fosstodon.org/@RichardJActon">Mastodon</a>
 

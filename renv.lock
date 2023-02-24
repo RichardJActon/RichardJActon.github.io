@@ -22,6 +22,12 @@
       "Version": "0.40",
       "Source": "Repository",
       "Requirements": []
+    },
+    "yaml": {
+      "Package": "yaml",
+      "Version": "2.3.5",
+      "Source": "Repository",
+      "Requirements": []
     }
   }
 }
