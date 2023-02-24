@@ -1,6 +1,7 @@
 ---
 title: "My new ebook 'Data: Inception to Publication & Beyond'"
 description: "The focus is on creating a workflow for streamlined generation, analysis, & publication of FAIR research data with reproducible analyses both in theory and practice."
+image: HDBI-data-logo.svg
 date: "2023-01-30"
 author: 
   - name: "Richard J. Acton"
