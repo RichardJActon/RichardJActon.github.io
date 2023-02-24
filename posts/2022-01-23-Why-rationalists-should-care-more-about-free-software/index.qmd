@@ -10,6 +10,8 @@ categories:
   - FLOSS
 ---
 
+![Tux the Linux penguin and the GNU project's  Gnu](gnu-plus-linux.png){width=180px}
+
 *cross-posted to [lesswrong](https://www.lesswrong.com/posts/SoqQ3ShW2xmdpjeZ7/why-rationalists-should-care-more-about-free-software)*
 
 # Why rationalists should care (more) about free software
