@@ -10,6 +10,8 @@ about:
     - icon: github
       text: Github
       href: https://github.com/RichardJActon
+    - text: "{{< fa brands orcid >}}"
+      href: https://orcid.org/0000-0002-2574-9611
 ---
 
 # Dr. Richard J. Acton MSci, MSc, Phd
@@ -20,31 +22,36 @@ about:
 
 ## Contact me
 
-### <i class="bi bi-envelope-fill"> email 
+### {{< fa envelope >}} email 
 
 Personal
 
-<i class="bi bi-envelope-fill"></i> [richardjacton\@pan-narrans.xyz](mailto:richardjacton@pan-narrans.xyz)
+{{< fa envelope >}} [richardjacton\@pan-narrans.xyz](mailto:richardjacton@pan-narrans.xyz)
 
 [*PGP: 96c20929fa88dd8992704df8975f133a9f96f86b*](https://raw.githubusercontent.com/RichardJActon/keys/master/publickey.richardjacton%40pm.me-96c20929fa88dd8992704df8975f133a9f96f86b.asc)
 
 Work
 
-<i class="bi bi-envelope-fill"></i> [Richard.Acton\@babraham.ac.uk](mailto:richardjacton@pan-narrans.xyz)
+{{< fa envelope >}} [Richard.Acton\@babraham.ac.uk](mailto:richardjacton@pan-narrans.xyz)
 
 *unencrypted, subject to FOI requests*
 
-### <i class="bi bi-chat-fill"></i> Messaging
+### {{< fa envelope >}} Messaging
 
 Decentralised, end-2-end encrypted & anonymous
 
 
-<i class="bi bi-chat-fill"></i> [Matrix](https://matrix.org/) ID: @richardjacton:matrix.org
+{{< fa envelope >}} [Matrix](https://matrix.org/) ID: @richardjacton:matrix.org
 
 
-<i class="bi bi-chat-fill"></i> [Session](https://getsession.org/) ID: 051ebba96a4e385f16de4c1de30829202be5bdb5f539d790c7bc3e9b763e34b83c
+{{< fa envelope >}} [Session](https://getsession.org/) ID: 051ebba96a4e385f16de4c1de30829202be5bdb5f539d790c7bc3e9b763e34b83c
 
 
 ## Got Feedback for me?
 
 Met me? Worked with me? Interacted with me online? Got something complimentary constructively critical to offer? Leave it for me here: [admonymous.co/richardjacton](https://www.admonymous.co/richardjacton) (Anonymously unless you include personally identifiable info in you feedback), Thanks!
+
+
+<a rel="me" href="https://scholar.social/@RichardJActon">Mastodon</a>
+
+

@@ -14,12 +14,7 @@
       "Version": "0.15.5",
       "Source": "Repository",
       "Repository": "RSPM",
-      "Requirements": []
-    },
-    "tinytex": {
-      "Package": "tinytex",
-      "Version": "0.40",
-      "Source": "Repository",
+      "Hash": "6a38294e7d12f5d8e656b08c5bd8ae34",
       "Requirements": []
     }
   }

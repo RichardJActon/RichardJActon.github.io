@@ -83,6 +83,7 @@ book_build:
     curl -L -o $QUARTO_FILE $QUARTO_URL
     DEBIAN_FRONTEND=noninteractive apt-get install -y -q -f ./$QUARTO_FILE
     rm $QUARTO_FILE
+    quarto install extension --no-prompt quarto-ext/fontawesome
 
     # NB this will need to change if the Renv version in the project is updated - automate this? get renv version from the lock file, check if latest cran then archive?
     # also remember that the latest source on CRAN has a different path to the archived versions e.g. https://cran.r-project.org/src/contrib/renv_0.16.0.tar.gz

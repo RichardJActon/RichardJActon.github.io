@@ -3,7 +3,7 @@ project:
 
 website:
   title: "*Pan narrans* - the story telling ape"
-  site-url: "https://richardjacton.github.io"
+  site-url: "https://richardjacton.gitlab.io/pan-narrans-blog/"
   open-graph: true
   twitter-card:
     creator: "@richardjacton@scholar.social"

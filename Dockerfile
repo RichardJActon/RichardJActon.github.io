@@ -29,6 +29,10 @@ RUN apt-get -y update && \
 # note jq and curl are used in renv_install.sh
 # librsvg2 libs are common dependencies of some R plotting libraries
 
+COPY install-quarto.sh ./install-quarto.sh
+RUN ./install-quarto.sh
+RUN quarto install extension --no-prompt quarto-ext/fontawesome
+
 USER ${NB_USER}
 
 # install the R dependencies
