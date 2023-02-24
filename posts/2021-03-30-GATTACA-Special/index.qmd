@@ -9,5 +9,7 @@ categories:
   - podcasts
 ---
 
+![half cell half ringed planet with GATTACA superimposed](25_GATTACA_Special_thumb.png){width=180px}
+
 Episode 25 of Xenothesis, the podcast I cohost with my friend Michael Glinka is a [special episode on the 1997 film GATTACA](https://www.xenothesis.com/25_gattaca_special/) 
 
