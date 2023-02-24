@@ -1,7 +1,9 @@
 ---
 title: Podcast appearance on aging biology
 description: "I made an appearance on the [bayesian conspiracy podcast](https://www.thebayesianconspiracy.com/2020/12/127-all-about-aging-with-richard-acton/) to talk about  aging biology."
-author: "Richard J. Acton"
+author: 
+  - name: "Richard J. Acton"
+    orcid: 0000-0002-2574-9611
 date: "2021-10-06"
 categories:
   - rationalism

@@ -1,7 +1,9 @@
 ---
 title: An intuitive explanation of inferential distance
 description: "Explaining the concept of inferential distance, the distance between different beliefs in units of logical steps"
-author: "Richard J. Acton"
+author: 
+  - name: "Richard J. Acton"
+    orcid: 0000-0002-2574-9611
 date: "2017-11-26"
 categories:
   - rationalism

@@ -1,7 +1,9 @@
 ---
 title: PhD Thesis
 description: "My PhD Thesis"
-author: "Richard J. Acton"
+author: 
+  - name: "Richard J. Acton"
+    orcid: 0000-0002-2574-9611
 date: "2021-10-06"
 categories:
   - publications

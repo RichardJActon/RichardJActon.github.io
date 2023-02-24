@@ -1,7 +1,9 @@
 ---
 title: Why multi-panel figures are terrible & we should stop using them.
 description: "My problems with multipanel figure and why I think they are an inefficent way of communicating scientific results, a problem for accessibility, and proposals for testing these ideas"
-author: "Richard J. Acton"
+author: 
+  - name: "Richard J. Acton"
+    orcid: 0000-0002-2574-9611
 date: "2022-04-02"
 categories:
   - literate science
