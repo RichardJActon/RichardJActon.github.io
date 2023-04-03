@@ -2,6 +2,7 @@
 title: "Showing our working"
 subtitle: "Transparency for trustworthy science"
 description: ""
+knitr: true
 # image: HDBI-data-logo.svg
 date: "2023-04-03"
 author: 
