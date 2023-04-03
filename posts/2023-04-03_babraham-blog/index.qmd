@@ -182,7 +182,7 @@ Here's a table fleshing out the analogy with some small examples of the sorts of
 <ul>
 <li><p>OS 🐧/🪟/🍎</p></li>
 <li><p>🩹 R v4.2.0</p></li>
-<li><p>✅ <Environment management tools &amp; Containers <code>renv.lock</code></p></li>
+<li><p>✅ Environment management tools &amp; Containers <code>renv.lock</code></p></li>
 </ul></td>
 </tr>
 <tr class="even">
