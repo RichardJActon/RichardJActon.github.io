@@ -2,6 +2,9 @@
 title: "Showing our working"
 subtitle: "Transparency for trustworthy science"
 description: ""
+format: 
+  html: default 
+  docx: default
 knitr: true
 # image: HDBI-data-logo.svg
 date: "2023-04-03"
@@ -86,7 +89,7 @@ This abundance of possible properties that could be recorded leads to the follow
 The answers to these questions are complex and context dependent but in general scientific communities have to get together and decide for themselves what they need to know and how best to represent that information by creating community standards that they can agree to adhere to.
 
 This has varying degrees of success....
-`r emo::ji("person_shrugging ")` ![](https://imgs.xkcd.com/comics/standards.png)
+`r emo::ji("person_shrugging")` ![](https://imgs.xkcd.com/comics/standards.png)
 
 Fortunately, There are some general principles that we can adhere to when designing domain specific metadata standards and things it is sensible for everyone to consider when sharing their data.
 
