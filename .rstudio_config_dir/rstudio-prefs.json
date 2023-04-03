@@ -52,7 +52,6 @@
     "jobs_tab_visibility": "shown",
     "visual_markdown_editing_show_margin": true,
     "visual_markdown_code_editor_line_numbers": true,
-    "visual_markdown_editing_canonical": true,
     "visual_markdown_editing_wrap": "sentence",
     "spelling_dictionary_language": "en_GB"
 }

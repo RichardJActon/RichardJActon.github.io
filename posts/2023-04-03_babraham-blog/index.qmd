@@ -1,6 +1,6 @@
 ---
 title: "Showing our working"
-subtitle: "Transparency for trustworthy science*🔎🧑🏼‍🔬"
+subtitle: "Transparency for trustworthy science"
 description: ""
 # image: HDBI-data-logo.svg
 date: "2023-04-03"
@@ -10,13 +10,13 @@ author:
 categories: 
   - publications
   - literate science
-license: CC-BY 4.0
+license: "CC-BY 4.0"
 bibliography: references.bib
 ---
 
 ## Why show our working?
 
-We all remember being told to show our working in school, usually in maths 🧮.
+We all remember being told to show our working in school, usually in maths `r emo::ji("abacus")`.
 Why were we asked to do this?
 So that someone else can follow our reasoning, step-by-step, and see (with a little effort) for themselves if they found our reasons sound, or at least partially so.
 This is one of the fundamental motivating factors for open science, sharing our data and methods so that others can assess our conclusions for themselves with all of the same information.
@@ -40,19 +40,19 @@ Unfortunately not as well as you might hope.
 
 ## Are we any good at showing our working? How hard can it be?
 
-To start with, across disciplines our work is getting harder to read as it becomes more laden with 'science-ese' or general scientific jargon, or so conclude Plaven-Sigray and co-authors in a 2017 paper in eLIFE "The readability of scientific texts is decreasing over time" \[@plavén-sigray2017\].
+To start with, across disciplines our work is getting harder to read as it becomes more laden with 'science-ese' or general scientific jargon, or so conclude Plaven-Sigray and co-authors in a 2017 paper in eLIFE "The readability of scientific texts is decreasing over time" [@plavén-sigray2017].
 This does not help the general accessibility of our work to colleagues, students, science journalists or the public.
 Nor is it driven by specific technical jargon which is a useful communication shorthand, it's mostly the addition of superfluous polysyllabic obfuscationalisms intended to seem more erudite and authoritative Richard F. Harris's 2017 book "Rigor mortis: how sloppy science creates worthless cures, crushes hope, and wastes billions" [@harris2017] & "Stuart Ritchie's 2020 book Science fictions: exposing fraud, bias, negligence and hype in science" [@ritchie2020] called popular attention to issues of reproducibility especially in the life sciences.
 In 2021 a series of papers was published by the '[Reproducibility Project: Cancer Biology](https://www.cos.io/rpcb)' summarising the results of efforts spanning 8 years to reproduce the findings of 193 experiments from 53 prominent papers in field of cancer biology.
 Their results were not particularly reassuring.
-**0 of the 193 experiments were described in sufficient detail for the project team to design protocols to repeat them**, yes none of them could be repeated without additional information from the original researchers 😮.
+**0 of the 193 experiments were described in sufficient detail for the project team to design protocols to repeat them**, yes none of them could be repeated without additional information from the original researchers.
 Of the 193 experiments the researchers were eventually able to repeat 50, where they were able to get some additional information from the original researchers, 32% of whom did not respond helpfully or at all to their inquiries.
 Between 40% and 80% of these 50 experiments, were successfully replicated, depending on how the criteria for successful replication were applied.
 Reproducing biological work is genuinely a difficult task, lab work requires significant skill that is often hard to fully codify in protocols.
 Biology has a lot of inherent variability even when you are going to great lengths to get the same starting conditions there are sometimes factors that it is difficult to control.
-Analysing your data though, reproducing that should be easy right 😎?
-It's all on the computer you can just run the same thing again right 🥺?
-Alas it is not as simple as you might think 😮‍💨.
+Analysing your data though, reproducing that should be easy right?
+It's all on the computer you can just run the same thing again right?
+Alas it is not as simple as you might think.
 It can take several months to reproduce a bioinformatic analysis in a published paper if it is possible at all Quantifying Reproducibility in Computational Biology: The Case of the Tuberculosis Drugome [@garijo2013].
 (Significant strides have been made in reproducible analysis since that paper was written but I've not found a more recent attempt to quantify the problem.)
 
@@ -84,7 +84,8 @@ This abundance of possible properties that could be recorded leads to the follow
 
 The answers to these questions are complex and context dependent but in general scientific communities have to get together and decide for themselves what they need to know and how best to represent that information by creating community standards that they can agree to adhere to.
 
-This has varying degrees of success...🤷🏼.![](https://imgs.xkcd.com/comics/standards.png)
+This has varying degrees of success....
+`r emo::ji("person_shrugging ")` ![](https://imgs.xkcd.com/comics/standards.png)
 
 Fortunately, There are some general principles that we can adhere to when designing domain specific metadata standards and things it is sensible for everyone to consider when sharing their data.
 
@@ -107,47 +108,51 @@ One of the approaches we can take to making our data available for others to use
     -   Where is came from/how it was generated and other attributes are well documented according to community standards.
     -   It's licensed so it can be used.
 
-Reproducing lab work 🧑🏼‍🔬 and computational work 🧑🏼‍💻 analogises quite well to cooking 🧑🏼‍🍳, a recipe is comprised of a list of ingredients (Data, Materials & Reagents), a set of steps to follow (Code, Protocols), and descriptions of the environment in which the food is cooked.
+Reproducing lab work `r emo::ji("man_scientist")` and computational work `r emo::ji("man_technologist")` analogises quite well to cooking `r emo::ji("man_cook")`, a recipe is comprised of a list of ingredients (Data, Materials & Reagents), a set of steps to follow (Code, Protocols), and descriptions of the environment in which the food is cooked.
 e.g.
 The type and temperature of the oven (Compute environment, Lab environment) and additional information that helps me find, contextualise and appropriately use the recipe (metadata): Some recipes are overly vague and some highly specific, this might depend on the difficultly and stakes of getting a tasty or at least edible result.
-Science can be like high stakes cooking (Think, a meal for diplomats from two countries with a tense relationship who also happen to be restaurant critics with a bunch of mutually incompatible food allergies and religious dietary restrictions) so the recipes have to be good, *really good* 😅.
+Science can be like high stakes cooking (Think, a meal for diplomats from two countries with a tense relationship who also happen to be restaurant critics with a bunch of mutually incompatible food allergies and religious dietary restrictions) so the recipes have to be good, *really good* `r emo::ji("sweat_smile")`.
 
 Here's a table fleshing out the analogy with some small examples of the sorts of information can fall into these categories as they apply to these different disciplines:
 
-::: column-page
-+-------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-|             | Cooking 🧑🏼‍🍳                                                                                                | Lab Work 🧑🏼‍🔬                                                                                                       | Computational Analysis 🧑🏼‍💻                                    |
-+=============+===========================================================================================================+===================================================================================================================+==============================================================+
-| Inputs      | **Ingredients**                                                                                           | **Materials & Reagents**                                                                                          | **Data**                                                     |
-|             |                                                                                                           |                                                                                                                   |                                                              |
-|             | -   7oz Flour ❌ (vague)                                                                                  | -   HeLa cells                                                                                                    | -   Human Genome                                             |
-|             |                                                                                                           |                                                                                                                   |                                                              |
-|             | -   200g Plain Wheat Flour (all-purpose/550/55/0) ✅                                                      | -   [UKBi001-A](https://hpscreg.eu/about/naming-tool)                                                             | -   *Homo sapiens*                                           |
-|             |                                                                                                           |                                                                                                                   |                                                              |
-|             |                                                                                                           |                                                                                                                   |     (NCBI:txid9606) genome (Ensembl 109, GRCh38.p13 )        |
-+-------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-| Process     | **Cooking Instructions**                                                                                  | **Protocols**                                                                                                     | **Code**                                                     |
-|             |                                                                                                           |                                                                                                                   |                                                              |
-|             | -   Bake at medium temperature until bronzed ❌ (vague)                                                   | -   Gel electrophoresis ❌ (vague)                                                                                | -   `random-scr ipt-from-email.R` ❌                         |
-|             | -   Bake at 190℃ for 35mins if using a fan oven... ✅                                                     | -   Agarose gel electrophoresis (0.5%) TBE buffer, 120V, ethidium bromide, 10kb ladder from... ✅                 |                                                              |
-|             |                                                                                                           |                                                                                                                   | -   `git` repository ✅                                      |
-+-------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-| Environment | **Kitchen Conditions**                                                                                    | **Lab Environment**                                                                                               | **Compute Environment**                                      |
-|             |                                                                                                           |                                                                                                                   |                                                              |
-|             | -   Ambient temperature🌡, pressure🏔️, and humidity💧 (What's the boiling point of water in your kitchen?) | -   Ambient temperature🌡, pressure🏔️, and humidity💧 (What's the boiling point of water in your ~~kitchen~~ Lab?) | -   OS🐧/🪟/🍎                                               |
-|             |                                                                                                           |                                                                                                                   |                                                              |
-|             |                                                                                                           | -   How you wash you glassware (no really this has affected the reproducbility of experiments)                    | -   R v4.2.0 🩹                                              |
-|             |                                                                                                           |                                                                                                                   |                                                              |
-|             |                                                                                                           |                                                                                                                   | -   Environment management tools & Containers `renv.lock` ✅ |
-+-------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
-| Context     | **Discernment**                                                                                           | **Metadata**                                                                                                      | **Metadata** (same as Lab +)                                 |
-|             |                                                                                                           |                                                                                                                   |                                                              |
-|             | -   History, Culture, & Origins of a Dish 🌍                                                              | -   Who: Steve When: Tuesday ❌ (vague)                                                                           | -   Who: PGP fingerprint: 96C2 0929 FA88 DD89 9270           |
-|             |                                                                                                           |                                                                                                                   |                                                              |
-|             | -   Allergens 😵                                                                                          | -   Who: Steven Stickler (ORCID: 0000-1234-1234-1234) When: 2023-03-30 15:34 (UTC+0) ✅                           | -   When: commit: 954086fdf13d8...                           |
-|             |                                                                                                           |                                                                                                                   |                                                              |
-|             | -   Appropriate pairings 🍷                                                                               |                                                                                                                   |                                                              |
-+-------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
+::: column-screen-inset
++-------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+|             | Cooking `r emo::ji("man_cook")`                                                                      | Lab Work `r emo::ji("man_scientist")`                                                                                        | Computational Analysis `r emo::ji("man_technologist")`                         |
++=============+======================================================================================================+==============================================================================================================================+================================================================================+
+| Inputs      | **Ingredients**                                                                                      | **Materials & Reagents**                                                                                                     | **Data**                                                                       |
+|             |                                                                                                      |                                                                                                                              |                                                                                |
+|             | -   `r emo::ji("x")` 7oz Flour \(vague\)                                                             | -   `r emo::ji("x")` HeLa cells                                                                                              | -   `r emo::ji("x")` Human Genome                                              |
+|             |                                                                                                      |                                                                                                                              |                                                                                |
+|             | -   `r emo::ji("check")` 200g Plain Wheat Flour \(all-purpose\/550\/55\/0\)                          | -   `r emo::ji("check")` [UKBi001-A](https://hpscreg.eu/about/naming-tool)                                                   | -   `r emo::ji("check")` *Homo sapiens*                                        |
+|             |                                                                                                      |                                                                                                                              |      \(NCBI:txid9606\) genome \(Ensembl 109, GRCh38.p13\)                      |
+|             |                                                                                                      |                                                                                                                              |                                                                                |
++-------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| Process     | **Cooking Instructions**                                                                             | **Protocols**                                                                                                                | **Code**                                                                       |
+|             |                                                                                                      |                                                                                                                              |                                                                                |
+|             | -   `r emo::ji("x")` Bake at medium temperature until bronzed \(vague\)                              | -   `r emo::ji("x")` Gel electrophoresis \(vague\)                                                                           | -   `r emo::ji("x")` `random-script-from-email.R`                              |
+|             |                                                                                                      |                                                                                                                              |                                                                                |
+|             | -   `r emo::ji("check")` Bake at 190C for 35mins if using a fan oven                                 | -   `r emo::ji("check")` Agarose gel electrophoresis \(0.5\%\) TBE buffer, 120V, ethidium bromide, 10kb ladder from...       | -   `r emo::ji("check")` `git` repository                                      |
+|             |                                                                                                      |                                                                                                                              |                                                                                |
++-------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| Environment | **Kitchen Conditions**                                                                               | **Lab Environment**                                                                                                          | **Compute Environment**                                                        |
+|             |                                                                                                      |                                                                                                                              |                                                                                |
+|             | -   Ambient temperature, pressure, and humidity                                                      | -   Ambient temperature, pressure, and humidity \(What's the boiling point of water in your ~~kitchen~~ Lab?\)               | -   OS `r emo::ji("penguin")`\/`r emo::ji("white_flag")`\/`r emo::ji("apple")` |
+|             |     \(What's the boiling point of water in your kitchen?\)                                           |                                                                                                                              |                                                                                |
+|             |                                                                                                      | -   How you wash you glassware \(no really this has affected the reproducbility of experiments\)                             | -   `r emo::ji("ballot_box_with_check")` R v4.2.0                              |
+|             |                                                                                                      |                                                                                                                              |                                                                                |
+|             |                                                                                                      |                                                                                                                              | -   `r emo::ji("check")` Environment management tools & Containers `renv.lock` |
+|             |                                                                                                      |                                                                                                                              |                                                                                |
++-------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+| Context     | **Discernment**                                                                                      | **Metadata**                                                                                                                 | **Metadata** (same as Lab +)                                                   |
+|             |                                                                                                      |                                                                                                                              |                                                                                |
+|             | -   History, Culture, & Origins of a Dish `r emo::ji("earth_africa")`                                | -   `r emo::ji("x")` Who: Steve When: Tuesday \(vague\)                                                                      | -   Who: PGP fingerprint: 96C2 0929 FA88 DD89 9270                             |
+|             |                                                                                                      |                                                                                                                              |                                                                                |
+|             | -   Allergens `r emo::ji("skull")`                                                                   | -   `r emo::ji("check")` Who: Steven Stickler \(ORCID: 0000-1234-1234-1234\) When: 2023-03-30 15:34 \(UTC+0\)                | -   When: commit: 954086fdf13d8...                                             |
+|             |                                                                                                      |                                                                                                                              |                                                                                |
+|             | -   Appropriate pairings `r emo::ji("wine_glass")`                                                   |                                                                                                                              |                                                                                |
+|             |                                                                                                      |                                                                                                                              |                                                                                |
++-------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------+
+
 :::
 
 When a protocol can't quite capture your bench work well enough that someone else could do your experiment if they read it that you can take the approach of [JoVE](https://www.jove.com/) (The Journal of Visualised Experiments) if that's a bit much the less formal approach is available, anyone with a smartphone or action camera can film their experimental work upload it to figshare and get a DOI to reference in a protocol on [protocols.io](https://www.protocols.io/) or in a paper.
@@ -163,7 +168,7 @@ It's quite hard to do in certain cases often because tooling and automations hav
 
 In his article Five selfish reasons to work reproducibly [@markowetz2015] Florian Markowetz lays out some excellent reasons to get ahead of the curve on working reproducibly.
 
-### Make it easy & Useful 🥕 (Carrot)
+### Make it easy & Useful `r emo::ji("carrot")` (Carrot)
 
 The laboriousness of recording and providing this level of detail can be a major impediment to researchers ..., what can be automated, what tools, practices and standard procedures can scientists adopt to make the provision of sufficiently detailed structured information a part of their workflow that does not get in their way and if anything makes their lives easier?
 
@@ -171,7 +176,7 @@ The laboriousness of recording and providing this level of detail can be a major
     -   open-source tools
     -   (don't develop a proprietary platform or product to try and solve these issue or people like me will tell others not to use it as the incentives don't like up with the degree of interoperability and portability needed go with a compatible open-source business model)
 
-### Nice paper/grant you've got there 'be a shame if I couldn't publish/fund it, unless... 📏 (Stick)
+### Nice paper/grant you've got there 'be a shame if I couldn't publish/fund it, unless... `r emo::ji("straight_ruler")` (Stick)
 
 -   Peer Reviewer
     -   When you review things ask questions about reproducibility, and FAIR data. This is where the expectation of higher standards in this area can begin to be set. (If you get asked to review stuff a lot and would like to reduce incoming requests suddenly becoming a reproducibility nut might lighten your load)
