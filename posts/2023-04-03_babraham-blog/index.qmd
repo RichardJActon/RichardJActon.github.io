@@ -1,0 +1,203 @@
+---
+title: "Showing our working"
+subtitle: "Transparency for trustworthy science*🔎🧑🏼‍🔬"
+description: ""
+# image: HDBI-data-logo.svg
+date: "2023-04-03"
+author: 
+  - name: "Richard J. Acton"
+    orcid: 0000-0002-2574-9611
+categories: 
+  - publications
+  - literate science
+license: CC-BY 4.0
+bibliography: references.bib
+---
+
+## Why show our working?
+
+We all remember being told to show our working in school, usually in maths 🧮.
+Why were we asked to do this?
+So that someone else can follow our reasoning, step-by-step, and see (with a little effort) for themselves if they found our reasons sound, or at least partially so.
+This is one of the fundamental motivating factors for open science, sharing our data and methods so that others can assess our conclusions for themselves with all of the same information.
+This is core to the corrective mechanism that drives the scientific progress, you can't progress if you can't spot mistakes, gaps, and misunderstandings; importantly, you can't spot these if you can't see our working.
+Ideally anyone can ask: "how do you know what you think you know?" and we can provide a detailed and compelling answer that anyone can challenge and, with some effort, check for themselves.
+Trust in our conclusions is, rightly, derived from the transparency and accountability of our processes.
+This applies both within the scientific community and to our relationship with the public.
+
+The number and complexity of the steps that take us from our starting point to our conclusions in modern science has grown as the depth of our understanding of the world has increased.
+This has made it harder, as a practical matter, to show all of our working from start to finish.
+Doing so however is no less important now than it was ever been, if anything the complexity of modern science makes it more important than ever.
+The length of the story that now has to be told to get from basic assumptions to conclusions is now quite long.
+In many cases there is also a great deal of context needed to understand some of the questions we now tackle.
+This can present a significant communication challenge when interacting with the public and even specialists in other disciplines.
+The effort necessary to asses the strength of other's conclusions has risen, this makes the importance of explanatory clarity greater than ever.
+One of the factors which makes completeness of description challenging is that It is rarely one person, or even one research group, that is responsible for the full chain of steps that produce a modern research paper, especially 'prestigious' ones.
+Thus, there is no single person with full insight into the granular details of every experiment and method used in many modern papers.
+Consequently, ensuring that every detail needed for reproducible work can be a significant coordination challenge among co-authors.
+So how are we, the scientific community doing at this task of showing our work?
+Unfortunately not as well as you might hope.
+
+## Are we any good at showing our working? How hard can it be?
+
+To start with, across disciplines our work is getting harder to read as it becomes more laden with 'science-ese' or general scientific jargon, or so conclude Plaven-Sigray and co-authors in a 2017 paper in eLIFE "The readability of scientific texts is decreasing over time" \[@plavén-sigray2017\].
+This does not help the general accessibility of our work to colleagues, students, science journalists or the public.
+Nor is it driven by specific technical jargon which is a useful communication shorthand, it's mostly the addition of superfluous polysyllabic obfuscationalisms intended to seem more erudite and authoritative Richard F. Harris's 2017 book "Rigor mortis: how sloppy science creates worthless cures, crushes hope, and wastes billions" [@harris2017] & "Stuart Ritchie's 2020 book Science fictions: exposing fraud, bias, negligence and hype in science" [@ritchie2020] called popular attention to issues of reproducibility especially in the life sciences.
+In 2021 a series of papers was published by the '[Reproducibility Project: Cancer Biology](https://www.cos.io/rpcb)' summarising the results of efforts spanning 8 years to reproduce the findings of 193 experiments from 53 prominent papers in field of cancer biology.
+Their results were not particularly reassuring.
+**0 of the 193 experiments were described in sufficient detail for the project team to design protocols to repeat them**, yes none of them could be repeated without additional information from the original researchers 😮.
+Of the 193 experiments the researchers were eventually able to repeat 50, where they were able to get some additional information from the original researchers, 32% of whom did not respond helpfully or at all to their inquiries.
+Between 40% and 80% of these 50 experiments, were successfully replicated, depending on how the criteria for successful replication were applied.
+Reproducing biological work is genuinely a difficult task, lab work requires significant skill that is often hard to fully codify in protocols.
+Biology has a lot of inherent variability even when you are going to great lengths to get the same starting conditions there are sometimes factors that it is difficult to control.
+Analysing your data though, reproducing that should be easy right 😎?
+It's all on the computer you can just run the same thing again right 🥺?
+Alas it is not as simple as you might think 😮‍💨.
+It can take several months to reproduce a bioinformatic analysis in a published paper if it is possible at all Quantifying Reproducibility in Computational Biology: The Case of the Tuberculosis Drugome [@garijo2013].
+(Significant strides have been made in reproducible analysis since that paper was written but I've not found a more recent attempt to quantify the problem.)
+
+Why is this the case?
+What make reproducibility hard and what can we do to make it better?
+
+## How can we do better?
+
+As the data outputs manager for the [Human Developmental Biology Initiative (HDBI)](https://www.hdbi.org) It's my role to make it easier for the other scientists in HDBI to make their data available to others, and easier for them to make both their experiments and analyses reproducible.
+
+### What's needed for data & methods to be open and reproducible?
+
+If you begin looking into the area of reproducibility you will, before too long, encounter the somewhat nebulous term 'metadata'.
+*Meta* is from the Greek meaning something like "higher" or "beyond", metadata, therefore is data about data.
+So what sorts of things are metadata?
+Who generated it?
+When?
+With what machine?
+With what settings on that machine?
+Why?
+What properties did the samples measured have?
+Species, type(s) of cell, stage of development?
+What where the sample preparation steps?
+The answers to all these questions and more can be considered metadata.
+This abundance of possible properties that could be recorded leads to the following questions:
+
+-   How do we decide which pieces of metadata we need for a given experiment?
+-   How do we store and organise them nicely so people and computers can read them?
+
+The answers to these questions are complex and context dependent but in general scientific communities have to get together and decide for themselves what they need to know and how best to represent that information by creating community standards that they can agree to adhere to.
+
+This has varying degrees of success...🤷🏼.![](https://imgs.xkcd.com/comics/standards.png)
+
+Fortunately, There are some general principles that we can adhere to when designing domain specific metadata standards and things it is sensible for everyone to consider when sharing their data.
+
+The 'linked data' approach to devising and representing metadata?
+use the same set tools and principle to come up with a domain specific metadata description.
+so that components common to different domains can be re-used e.g. an agreed set of standard terms to refer to certain classes of things like cell-types of sequencing technologies so that we don't use different words for the same thing.
+
+One of the approaches we can take to making our data available for others to use, so that they can both use it in their own work, and check existing conclusions is based around the acronym FAIR:
+
+#### FAIR (Findable, Accessible, Interoperable, Re-usable)
+
+-   Findable
+    -   Has a unique identifier that can be looked up in a database, plus some associated terms so you can find the id with a search.
+-   Accessible
+    -   If I've got the ID I can download a copy, or figure out who to ask for permission to download a copy if there are e.g. privacy restrictions.
+-   Interoperable
+    -   It's in a file format I can read (without expensive proprietary software).
+    -   It's described in standard terminology so I can easily search for it and connect it with data about the same/related things.
+-   Re-usable
+    -   Where is came from/how it was generated and other attributes are well documented according to community standards.
+    -   It's licensed so it can be used.
+
+Reproducing lab work 🧑🏼‍🔬 and computational work 🧑🏼‍💻 analogises quite well to cooking 🧑🏼‍🍳, a recipe is comprised of a list of ingredients (Data, Materials & Reagents), a set of steps to follow (Code, Protocols), and descriptions of the environment in which the food is cooked.
+e.g.
+The type and temperature of the oven (Compute environment, Lab environment) and additional information that helps me find, contextualise and appropriately use the recipe (metadata): Some recipes are overly vague and some highly specific, this might depend on the difficultly and stakes of getting a tasty or at least edible result.
+Science can be like high stakes cooking (Think, a meal for diplomats from two countries with a tense relationship who also happen to be restaurant critics with a bunch of mutually incompatible food allergies and religious dietary restrictions) so the recipes have to be good, *really good* 😅.
+
+Here's a table fleshing out the analogy with some small examples of the sorts of information can fall into these categories as they apply to these different disciplines:
+
+::: column-page
++-------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
+|             | Cooking 🧑🏼‍🍳                                                                                                | Lab Work 🧑🏼‍🔬                                                                                                       | Computational Analysis 🧑🏼‍💻                                    |
++=============+===========================================================================================================+===================================================================================================================+==============================================================+
+| Inputs      | **Ingredients**                                                                                           | **Materials & Reagents**                                                                                          | **Data**                                                     |
+|             |                                                                                                           |                                                                                                                   |                                                              |
+|             | -   7oz Flour ❌ (vague)                                                                                  | -   HeLa cells                                                                                                    | -   Human Genome                                             |
+|             |                                                                                                           |                                                                                                                   |                                                              |
+|             | -   200g Plain Wheat Flour (all-purpose/550/55/0) ✅                                                      | -   [UKBi001-A](https://hpscreg.eu/about/naming-tool)                                                             | -   *Homo sapiens*                                           |
+|             |                                                                                                           |                                                                                                                   |                                                              |
+|             |                                                                                                           |                                                                                                                   |     (NCBI:txid9606) genome (Ensembl 109, GRCh38.p13 )        |
++-------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
+| Process     | **Cooking Instructions**                                                                                  | **Protocols**                                                                                                     | **Code**                                                     |
+|             |                                                                                                           |                                                                                                                   |                                                              |
+|             | -   Bake at medium temperature until bronzed ❌ (vague)                                                   | -   Gel electrophoresis ❌ (vague)                                                                                | -   `random-scr ipt-from-email.R` ❌                         |
+|             | -   Bake at 190℃ for 35mins if using a fan oven... ✅                                                     | -   Agarose gel electrophoresis (0.5%) TBE buffer, 120V, ethidium bromide, 10kb ladder from... ✅                 |                                                              |
+|             |                                                                                                           |                                                                                                                   | -   `git` repository ✅                                      |
++-------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
+| Environment | **Kitchen Conditions**                                                                                    | **Lab Environment**                                                                                               | **Compute Environment**                                      |
+|             |                                                                                                           |                                                                                                                   |                                                              |
+|             | -   Ambient temperature🌡, pressure🏔️, and humidity💧 (What's the boiling point of water in your kitchen?) | -   Ambient temperature🌡, pressure🏔️, and humidity💧 (What's the boiling point of water in your ~~kitchen~~ Lab?) | -   OS🐧/🪟/🍎                                               |
+|             |                                                                                                           |                                                                                                                   |                                                              |
+|             |                                                                                                           | -   How you wash you glassware (no really this has affected the reproducbility of experiments)                    | -   R v4.2.0 🩹                                              |
+|             |                                                                                                           |                                                                                                                   |                                                              |
+|             |                                                                                                           |                                                                                                                   | -   Environment management tools & Containers `renv.lock` ✅ |
++-------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
+| Context     | **Discernment**                                                                                           | **Metadata**                                                                                                      | **Metadata** (same as Lab +)                                 |
+|             |                                                                                                           |                                                                                                                   |                                                              |
+|             | -   History, Culture, & Origins of a Dish 🌍                                                              | -   Who: Steve When: Tuesday ❌ (vague)                                                                           | -   Who: PGP fingerprint: 96C2 0929 FA88 DD89 9270           |
+|             |                                                                                                           |                                                                                                                   |                                                              |
+|             | -   Allergens 😵                                                                                          | -   Who: Steven Stickler (ORCID: 0000-1234-1234-1234) When: 2023-03-30 15:34 (UTC+0) ✅                           | -   When: commit: 954086fdf13d8...                           |
+|             |                                                                                                           |                                                                                                                   |                                                              |
+|             | -   Appropriate pairings 🍷                                                                               |                                                                                                                   |                                                              |
++-------------+-----------------------------------------------------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------+
+:::
+
+When a protocol can't quite capture your bench work well enough that someone else could do your experiment if they read it that you can take the approach of [JoVE](https://www.jove.com/) (The Journal of Visualised Experiments) if that's a bit much the less formal approach is available, anyone with a smartphone or action camera can film their experimental work upload it to figshare and get a DOI to reference in a protocol on [protocols.io](https://www.protocols.io/) or in a paper.
+
+When doing an analysis you don't re-implement all steps from scratch you use existing tools to perform many calculations, these in turn use other tools creating a 'tree' of 'dependencies'.
+The way these tools work can change if the software gets updates so to re-run your analysis exactly I need to know not just the versions of the tools you were using but the versions of the tools your tools where using and so on.
+It's tools all the way down.
+
+## How can we encourage the adoption of these practices?
+
+So why are we not working more reproducibly already?
+It's quite hard to do in certain cases often because tooling and automations have not caught up to make it easier and it's not yet a norm to which we expect one-another to conform in the scientific community either when we review others' work or have our own reviewed.
+
+In his article Five selfish reasons to work reproducibly [@markowetz2015] Florian Markowetz lays out some excellent reasons to get ahead of the curve on working reproducibly.
+
+### Make it easy & Useful 🥕 (Carrot)
+
+The laboriousness of recording and providing this level of detail can be a major impediment to researchers ..., what can be automated, what tools, practices and standard procedures can scientists adopt to make the provision of sufficiently detailed structured information a part of their workflow that does not get in their way and if anything makes their lives easier?
+
+-   Developer
+    -   open-source tools
+    -   (don't develop a proprietary platform or product to try and solve these issue or people like me will tell others not to use it as the incentives don't like up with the degree of interoperability and portability needed go with a compatible open-source business model)
+
+### Nice paper/grant you've got there 'be a shame if I couldn't publish/fund it, unless... 📏 (Stick)
+
+-   Peer Reviewer
+    -   When you review things ask questions about reproducibility, and FAIR data. This is where the expectation of higher standards in this area can begin to be set. (If you get asked to review stuff a lot and would like to reduce incoming requests suddenly becoming a reproducibility nut might lighten your load)
+-   Journal Editor
+    -   If you are a journal editor and you are deciding between many good submissions make this a criterion for what you choose. If you are not asking these questions in your reviews of papers may clue editors in that academics now expect this and same their decisions on what to put out for review in the first place
+-   Grant Reviewer
+    -   If you review grants ask about peoples plans for making their data FAIR and their analyses reproducible. This will get them thinking about it well in advance and
+-   Press
+    -   If you are a member of the press or a popularise of science report favourably on publications that show their work and skeptically of those that don't
+-   Public *(also applies if you fall into any of the other categories)*
+    -   Ask your elected representative or the relevant minister (At time of writing [Michelle Donelan](https://www.gov.uk/government/people/michelle-donelan) Secretary of State for Science, Innovation and Technology) why the research councils aren't holding their grant awardees to a higher standard on reproducibility and FAIR date so the the best used can be made of public research funds?
+
+## Where Can I Start / Learn More?
+
+I've written a short ebook as a resource of HDBI members "[Data: Inception to Publication & Beyond](https://hdbi.gitlab.io/data-management/hdbi-data-resource/)" this is directed at a more technical audience but aims to be written in an accessible style.
+It features many links to external resources to learn more about a given topic in various media.
+I'm looking for feedback comments and suggestions for improvement from any readers.
+
+Table of contents:
+
+1.  What Constitutes Data?
+2.  When Should I Generate Data?
+3.  How to Store Your Data
+4.  Working With Data
+5.  When to Publish Data
+6.  Where to Publish Data
+7.  What Data to Publish
+8.  How to License Your Data
+9.  How to Manage References
