@@ -120,42 +120,92 @@ Science can be like high stakes cooking (Think, a meal for diplomats from two co
 Here's a table fleshing out the analogy with some small examples of the sorts of information can fall into these categories as they apply to these different disciplines:
 
 ::: column-screen-inset
-+-------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
-|             | Cooking `r emo::ji("man_cook")`                                                                      | Lab Work `r emo::ji("man_scientist")`                                                                                        | Computational Analysis `r emo::ji("man_technologist")`                           |
-+=============+======================================================================================================+==============================================================================================================================+==================================================================================+
-| Inputs      | **Ingredients**                                                                                      | **Materials & Reagents**                                                                                                     | **Data**                                                                         |
-|             |                                                                                                      |                                                                                                                              |                                                                                  |
-|             | -   7oz Flour \(vague\) `r emo::ji("x")`                                                             | -   `r emo::ji("x")` HeLa cells                                                                                              | -   Human Genome `r emo::ji("x")`                                                |
-|             |                                                                                                      |                                                                                                                              |                                                                                  |
-|             | -   200g Plain Wheat Flour \(all-purpose\/550\/55\/0\)  `r emo::ji("check")`                         | -   `r emo::ji("check")` [UKBi001-A](https://hpscreg.eu/about/naming-tool)                                                   | -   *Homo sapiens*                                                               |
-|             |                                                                                                      |                                                                                                                              |      \(NCBI:txid9606\) genome \(Ensembl 109, GRCh38.p13\) `r emo::ji("check")`   |
-|             |                                                                                                      |                                                                                                                              |                                                                                  |
-+-------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
-| Process     | **Cooking Instructions**                                                                             | **Protocols**                                                                                                                | **Code**                                                                         |
-|             |                                                                                                      |                                                                                                                              |                                                                                  |
-|             | -   Bake at medium temperature until bronzed \(vague\) `r emo::ji("x")`                              | -   Gel electrophoresis \(vague\) `r emo::ji("x")`                                                                           | -   `random-script-from-email.R` `r emo::ji("x")`                                |
-|             |                                                                                                      |                                                                                                                              |                                                                                  |
-|             | -   Bake at 190C for 35mins if using a fan oven `r emo::ji("check")`                                 | -   Agarose gel electrophoresis \(0.5\%\) TBE buffer, 120V, ethidium bromide, 10kb ladder from... `r emo::ji("check")`       | -   `git` repository `r emo::ji("check")`                                        |
-|             |                                                                                                      |                                                                                                                              |                                                                                  |
-+-------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
-| Environment | **Kitchen Conditions**                                                                               | **Lab Environment**                                                                                                          | **Compute Environment**                                                          |
-|             |                                                                                                      |                                                                                                                              |                                                                                  |
-|             | -   Ambient temperature, pressure, and humidity                                                      | -   Ambient temperature, pressure, and humidity \(What's the boiling point of water in your ~~kitchen~~ Lab?\)               | -   OS `r emo::ji("penguin")`\/`r emo::ji("white_flag")`\/`r emo::ji("apple")`   |
-|             |     \(What's the boiling point of water in your kitchen?\)                                           |                                                                                                                              |                                                                                  |
-|             |                                                                                                      | -   How you wash you glassware \(no really this has affected the reproducbility of experiments\)                             | -   `r emo::ji("ballot_box_with_check")` R v4.2.0                                |
-|             |                                                                                                      |                                                                                                                              |                                                                                  |
-|             |                                                                                                      |                                                                                                                              | -   `r emo::ji("check")` Environment management tools & Containers `renv.lock`   |
-|             |                                                                                                      |                                                                                                                              |                                                                                  |
-+-------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
-| Context     | **Discernment**                                                                                      | **Metadata**                                                                                                                 | **Metadata** (same as Lab +)                                                     |
-|             |                                                                                                      |                                                                                                                              |                                                                                  |
-|             | -   History, Culture, & Origins of a Dish `r emo::ji("earth_africa")`                                | -   Who: Steve When: Tuesday \(vague\) `r emo::ji("x")`                                                                      | -   Who: PGP fingerprint: 96C2 0929 FA88 DD89 9270                               |
-|             |                                                                                                      |                                                                                                                              |                                                                                  |
-|             | -   Allergens `r emo::ji("skull")`                                                                   | -   Who: Steven Stickler \(ORCID: 0000-1234-1234-1234\) When: 2023-03-30 15:34 \(UTC+0\) `r emo::ji("check")`                | -   When: commit: 954086fdf13d8...                                               |
-|             |                                                                                                      |                                                                                                                              |                                                                                  |
-|             | -   Appropriate pairings `r emo::ji("wine_glass")`                                                   |                                                                                                                              |                                                                                  |
-|             |                                                                                                      |                                                                                                                              |                                                                                  |
-+-------------+------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------+
+
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><p></p></th>
+<th style="text-align: left;"><p>Cooking 🧑‍🍳</p></th>
+<th style="text-align: left;"><p>Lab Work 🧑‍🔬</p></th>
+<th style="text-align: left;"><p>Computational Analysis 🧑‍💻</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;"><p>Inputs</p></td>
+<td style="text-align: left;"><p><strong>Ingredients</strong></p>
+<ul>
+<li><p>❌ 7oz Flour (vague) </p></li>
+<li><p>✅ 200g Plain Wheat Flour (all-purpose/550/55/0) </p></li>
+</ul></td>
+<td style="text-align: left;"><p><strong>Materials &amp; Reagents</strong></p>
+<ul>
+<li><p>❌ HeLa cells</p></li>
+<li><p>✅  <a href="https://hpscreg.eu/about/naming-tool">UKBi001-A</a></p></li>
+</ul></td>
+<td style="text-align: left;"><p><strong>Data</strong></p>
+<ul>
+<li><p>❌ Human Genome </p></li>
+<li><p>✅ <em>Homo sapiens</em> (NCBI:txid9606) genome (Ensembl 109, GRCh38.p13) </p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><p>Process</p></td>
+<td style="text-align: left;"><p><strong>Cooking Instructions</strong></p>
+<ul>
+<li><p>❌ Bake at medium temperature until bronzed (vague) </p></li>
+<li><p>✅ Bake at 190C for 35mins if using a fan oven </p></li>
+</ul></td>
+<td style="text-align: left;"><p><strong>Protocols</strong></p>
+<ul>
+<li><p>❌ Gel electrophoresis (vague) </p></li>
+<li><p>✅ Agarose gel electrophoresis (0.5%) TBE buffer, 120V, ethidium bromide, 10kb ladder from... </p></li>
+</ul></td>
+<td style="text-align: left;"><p><strong>Code</strong></p>
+<ul>
+<li><p>❌ <code>random-script-from-email.R</code> </p></li>
+<li><p>✅ <code>git</code> repository</p></li>
+</ul></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><p>Environment</p></td>
+<td style="text-align: left;"><p><strong>Kitchen Conditions</strong></p>
+<ul>
+<li>Ambient temperature, pressure, and humidity (What's the boiling point of water in your kitchen?)</li>
+</ul></td>
+<td style="text-align: left;"><p><strong>Lab Environment</strong></p>
+<ul>
+<li><p>Ambient temperature, pressure, and humidity (What's the boiling point of water in your <del>kitchen</del> Lab?)</p></li>
+<li><p>How you wash you glassware (no really this has affected the reproducbility of experiments)</p></li>
+</ul></td>
+<td style="text-align: left;"><p><strong>Compute Environment</strong></p>
+<ul>
+<li><p>OS 🐧/🪟/🍎</p></li>
+<li><p>🩹 R v4.2.0</p></li>
+<li><p>✅ <Environment management tools &amp; Containers <code>renv.lock</code></p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><p>Context</p></td>
+<td style="text-align: left;"><p><strong>Discernment</strong></p>
+<ul>
+<li><p>History, Culture, &amp; Origins of a Dish 🌍</p></li>
+<li><p>Allergens 😵</p></li>
+<li><p>Appropriate pairings 🍷</p></li>
+</ul></td>
+<td style="text-align: left;"><p><strong>Metadata</strong></p>
+<ul>
+<li><p>❌ Who: Steve When: Tuesday (vague) </p></li>
+<li><p>✅ Who: Steven Stickler (ORCID: 0000-1234-1234-1234) When: 2023-03-30 15:34 (UTC+0)</p></li>
+</ul></td>
+<td style="text-align: left;"><p><strong>Metadata</strong> (same as Lab +)</p>
+<ul>
+<li><p>Who: PGP fingerprint: 96C2 0929 FA88 DD89 9270</p></li>
+<li><p>When: commit: 954086fdf13d8...</p></li>
+</ul></td>
+</tr>
+</tbody>
+</table>
 
 :::
 
