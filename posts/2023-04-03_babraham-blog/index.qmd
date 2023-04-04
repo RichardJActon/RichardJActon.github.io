@@ -32,36 +32,39 @@ This applies both within the scientific community and to our relationship with t
 The number and complexity of the steps that take us from our starting point to our conclusions in modern science has grown as the depth of our understanding of the world has increased.
 This has made it harder, as a practical matter, to show all of our working from start to finish.
 Doing so however is no less important now than it was ever been, if anything the complexity of modern science makes it more important than ever.
-The length of the story that now has to be told to get from basic assumptions to conclusions is now quite long.
+The length of the story that now has to be told to get from basic assumptions to conclusions is quite long.
 In many cases there is also a great deal of context needed to understand some of the questions we now tackle.
 This can present a significant communication challenge when interacting with the public and even specialists in other disciplines.
-The effort necessary to asses the strength of other's conclusions has risen, this makes the importance of explanatory clarity greater than ever.
-One of the factors which makes completeness of description challenging is that It is rarely one person, or even one research group, that is responsible for the full chain of steps that produce a modern research paper, especially 'prestigious' ones.
+The effort necessary to asses the strength of others' conclusions has risen, this makes the importance of explanatory clarity greater than ever.
+One of the factors which makes completeness of description challenging is that It is rarely one person, or even one research group, that is responsible for the full chain of steps that produce a modern research paper, especially 'prestigious' ones with lots experiments often making use of varied methods.
 Thus, there is no single person with full insight into the granular details of every experiment and method used in many modern papers.
 Consequently, ensuring that every detail needed for reproducible work can be a significant coordination challenge among co-authors.
+
 So how are we, the scientific community doing at this task of showing our work?
 Unfortunately not as well as you might hope.
 
 ## Are we any good at showing our working? How hard can it be?
 
-To start with, across disciplines our work is getting harder to read as it becomes more laden with 'science-ese' or general scientific jargon, or so conclude Plaven-Sigray and co-authors in a 2017 paper in eLIFE "The readability of scientific texts is decreasing over time" [@plavén-sigray2017].
+To start with, across disciplines our work is getting harder to read. It has become laden with 'science-ese' or general scientific jargon, or so conclude Plaven-Sigray and co-authors in a 2017 paper in eLIFE "The readability of scientific texts is decreasing over time" [@plavén-sigray2017].
 This does not help the general accessibility of our work to colleagues, students, science journalists or the public.
-Nor is it driven by specific technical jargon which is a useful communication shorthand, it's mostly the addition of superfluous polysyllabic obfuscationalisms intended to seem more erudite and authoritative Richard F. Harris's 2017 book "Rigor mortis: how sloppy science creates worthless cures, crushes hope, and wastes billions" [@harris2017] & "Stuart Ritchie's 2020 book Science fictions: exposing fraud, bias, negligence and hype in science" [@ritchie2020] called popular attention to issues of reproducibility especially in the life sciences.
+Nor does it appear to driven by specific technical jargon which is a useful communication shorthand, it's apparently mostly the addition of seemingly superfluous polysyllabic obfuscationalisms presumably so that we can show-off our erudition `r emo::ji("wink")`.
+
+Richard F. Harris's 2017 book "Rigor mortis: how sloppy science creates worthless cures, crushes hope, and wastes billions" [@harris2017] & Stuart Ritchie's 2020 book "Science fictions: exposing fraud, bias, negligence and hype in science" [@ritchie2020] called popular attention to issues of reproducibility especially in the life sciences.
 In 2021 a series of papers was published by the '[Reproducibility Project: Cancer Biology](https://www.cos.io/rpcb)' summarising the results of efforts spanning 8 years to reproduce the findings of 193 experiments from 53 prominent papers in field of cancer biology.
 Their results were not particularly reassuring.
-**0 of the 193 experiments were described in sufficient detail for the project team to design protocols to repeat them**, yes none of them could be repeated without additional information from the original researchers.
+**0 of the 193 experiments were described in sufficient detail for the project team to design protocols to repeat them** `r emo::ji("sweat_smile")`, yes none of them could be repeated without additional information from the original researchers.
 Of the 193 experiments the researchers were eventually able to repeat 50, where they were able to get some additional information from the original researchers, 32% of whom did not respond helpfully or at all to their inquiries.
 Between 40% and 80% of these 50 experiments, were successfully replicated, depending on how the criteria for successful replication were applied.
 Reproducing biological work is genuinely a difficult task, lab work requires significant skill that is often hard to fully codify in protocols.
 Biology has a lot of inherent variability even when you are going to great lengths to get the same starting conditions there are sometimes factors that it is difficult to control.
-Analysing your data though, reproducing that should be easy right?
-It's all on the computer you can just run the same thing again right?
-Alas it is not as simple as you might think.
+Analysing your data though, reproducing that should be easy right `r emo::ji("sunglasses")`?
+It's all on the computer you can just run the same thing again right `r emo::ji("pleading_face")`?
+Alas it is not as simple as you might think `r emo::ji("person_facepalming")`.
 It can take several months to reproduce a bioinformatic analysis in a published paper if it is possible at all Quantifying Reproducibility in Computational Biology: The Case of the Tuberculosis Drugome [@garijo2013].
 (Significant strides have been made in reproducible analysis since that paper was written but I've not found a more recent attempt to quantify the problem.)
 
 Why is this the case?
-What make reproducibility hard and what can we do to make it better?
+What makes reproducibility hard and what can we do to make it better?
 
 ## How can we do better?
 
@@ -117,7 +120,7 @@ e.g.
 The type and temperature of the oven (Compute environment, Lab environment) and additional information that helps me find, contextualise and appropriately use the recipe (metadata): Some recipes are overly vague and some highly specific, this might depend on the difficultly and stakes of getting a tasty or at least edible result.
 Science can be like high stakes cooking (Think, a meal for diplomats from two countries with a tense relationship who also happen to be restaurant critics with a bunch of mutually incompatible food allergies and religious dietary restrictions) so the recipes have to be good, *really good* `r emo::ji("sweat_smile")`.
 
-Here's a table fleshing out the analogy with some small examples of the sorts of information can fall into these categories as they apply to these different disciplines:
+Here's a table fleshing out the analogy with some small examples of the sorts of information that can fall into these categories as they apply to these different disciplines:
 
 ::: column-screen-inset
 
@@ -195,13 +198,13 @@ Here's a table fleshing out the analogy with some small examples of the sorts of
 </ul></td>
 <td style="text-align: left;"><p><strong>Metadata</strong></p>
 <ul>
-<li><p>❌ Who: Steve When: Tuesday (vague) </p></li>
-<li><p>✅ Who: Steven Stickler (ORCID: 0000-1234-1234-1234) When: 2023-03-30 15:34 (UTC+0)</p></li>
+<li><p>❌ Who: Steve, When: Tuesday (vague) </p></li>
+<li><p>✅ Who: Steven Stickler (ORCID: 0000-1234-1234-1234), When: 2023-03-30 15:34 (UTC+0)</p></li>
 </ul></td>
 <td style="text-align: left;"><p><strong>Metadata</strong> (same as Lab +)</p>
 <ul>
 <li><p>Who: PGP fingerprint: 96C2 0929 FA88 DD89 9270</p></li>
-<li><p>When: commit: 954086fdf13d8...</p></li>
+<li><p>When: commit hash: 954086fdf13d8...</p></li>
 </ul></td>
 </tr>
 </tbody>
@@ -209,34 +212,39 @@ Here's a table fleshing out the analogy with some small examples of the sorts of
 
 :::
 
-When a protocol can't quite capture your bench work well enough that someone else could do your experiment if they read it that you can take the approach of [JoVE](https://www.jove.com/) (The Journal of Visualised Experiments) if that's a bit much the less formal approach is available, anyone with a smartphone or action camera can film their experimental work upload it to figshare and get a DOI to reference in a protocol on [protocols.io](https://www.protocols.io/) or in a paper.
+When a protocol can't quite capture your bench work well enough that someone else could do your experiment if they read it then you can take the approach of [JoVE](https://www.jove.com/) (The Journal of Visualised Experiments). If that's a bit much the less formal approach is available, anyone with a smartphone or action camera can film their experimental work upload it to figshare and get a DOI to reference in a protocol on [protocols.io](https://www.protocols.io/) or in a paper. (Enlist the help of a student an alarming fraction of them are surprisingly capable videographers thanks to social media.)
 
 When doing an analysis you don't re-implement all steps from scratch you use existing tools to perform many calculations, these in turn use other tools creating a 'tree' of 'dependencies'.
 The way these tools work can change if the software gets updates so to re-run your analysis exactly I need to know not just the versions of the tools you were using but the versions of the tools your tools where using and so on.
 It's tools all the way down.
+Fortunately there are tools of taking inventory of all the versions of all the tools that you've used, sharing this list and even re-creating the same computational environment from these inventories.
 
 ## How can we encourage the adoption of these practices?
 
 So why are we not working more reproducibly already?
-It's quite hard to do in certain cases often because tooling and automations have not caught up to make it easier and it's not yet a norm to which we expect one-another to conform in the scientific community either when we review others' work or have our own reviewed.
+It's quite hard to do in certain cases often because tooling and automations have not caught up to make it easier. It's also not yet a norm to which we expect one-another to conform in the scientific community, either when we review others' work or when we have our own reviewed. In his article Five selfish reasons to work reproducibly [@markowetz2015] Florian Markowetz lays out some excellent reasons to get ahead of the curve on working reproducibly.
 
-In his article Five selfish reasons to work reproducibly [@markowetz2015] Florian Markowetz lays out some excellent reasons to get ahead of the curve on working reproducibly.
+The laboriousness of recording and providing this level of detail can be a major impediment to researchers actually sharing their processes if they don't feel that doing so will be time well spent. So we should ask what can be automated, what tools, practices and standard procedures can scientists adopt to make the provision of sufficiently detailed structured information a part of their workflow that does not get in their way, and if anything makes their lives easier?
 
-### Make it easy & Useful `r emo::ji("carrot")` (Carrot)
+### Crafting a 'pit of sucess'
 
-The laboriousness of recording and providing this level of detail can be a major impediment to researchers ..., what can be automated, what tools, practices and standard procedures can scientists adopt to make the provision of sufficiently detailed structured information a part of their workflow that does not get in their way and if anything makes their lives easier?
+Make FAIR data and reproducibility the default and the expectation in every area, such that if you 'go with the flow' your work will be FAIR and reproducible. Not everyone will have the time, inclination or incentive to strive relentlessly towards a 'pinnacle of excellence' so raise to floor not the ceiling and construct a 'pit of success' into which we can all trip without trying too hard.
+We can do our best to make it easy & useful to do so but this may not be quite enough to get up over the hump in all cases. So in some cases we may have to take a slightly more "Nice paper/grant/dataset you've got there 'be a shame if you couldn't publish/fund/generate it, unless... " approach.
 
--   Developer
-    -   open-source tools
-    -   (don't develop a proprietary platform or product to try and solve these issue or people like me will tell others not to use it as the incentives don't like up with the degree of interoperability and portability needed go with a compatible open-source business model)
+Here is my advice for people in various roles for using a mixture of carrots `r emo::ji("carrot")` and sticks`r emo::ji("straight_ruler")` to improve FAIR data practices and working reproducibility.
 
-### Nice paper/grant you've got there 'be a shame if I couldn't publish/fund it, unless... `r emo::ji("straight_ruler")` (Stick)
-
--   Peer Reviewer
+- Core facility Staff
+  -   If you run/work in Microscopy, flow cytometry, bioinformatics, proteomics, sequencing, etc. facilities develop policies which make good metadata annotations a condition of researchers using your facilities and getting access to the data once it has been generated. Make it as frictionless as possible so as not to put them off, and showcase how useful it is to be able to call on well structured and anotated datasets.
+- Human Resources
+  -   Make proper data stewardship part of the on-boarding and leaving process. You shouldn't be able to clear HR when you are leaving if your data is not in a suitable state to hand over to others.
+-   Software Developers & IT Staff
+    -   Build tools and systems which make the ingestion, annotation, sharing, accessing, and processing of data as intuitive, seamless and integrated a process as possible with open-source tools.
+      -   (Don't develop a proprietary platform or product to try and solve these issue or people like me will tell others not to use it as the incentives don't line up with the degree of interoperability and portability needed in science. Go with an open-source business model that is compatible with the openness required by scientific process.)
+-   Peer Reviewers
     -   When you review things ask questions about reproducibility, and FAIR data. This is where the expectation of higher standards in this area can begin to be set. (If you get asked to review stuff a lot and would like to reduce incoming requests suddenly becoming a reproducibility nut might lighten your load)
--   Journal Editor
+-   Journal Editors
     -   If you are a journal editor and you are deciding between many good submissions make this a criterion for what you choose. If you are not asking these questions in your reviews of papers may clue editors in that academics now expect this and same their decisions on what to put out for review in the first place
--   Grant Reviewer
+-   Grant Reviewers
     -   If you review grants ask about peoples plans for making their data FAIR and their analyses reproducible. This will get them thinking about it well in advance and
 -   Press
     -   If you are a member of the press or a popularise of science report favourably on publications that show their work and skeptically of those that don't
@@ -245,11 +253,11 @@ The laboriousness of recording and providing this level of detail can be a major
 
 ## Where Can I Start / Learn More?
 
-I've written a short ebook as a resource of HDBI members "[Data: Inception to Publication & Beyond](https://hdbi.gitlab.io/data-management/hdbi-data-resource/)" this is directed at a more technical audience but aims to be written in an accessible style.
+I've written a short ebook as a resource for HDBI members "[Data: Inception to Publication & Beyond](https://hdbi.gitlab.io/data-management/hdbi-data-resource/)" this is directed at a more technical audience but aims to be written in an accessible style.
 It features many links to external resources to learn more about a given topic in various media.
-I'm looking for feedback comments and suggestions for improvement from any readers.
+It's a living document and I'm working on some new material for it, I'm always looking for feedback, comments and suggestions for improvement from any readers.
 
-Table of contents:
+To get a sense of what it covers here's a table of contents:
 
 1.  What Constitutes Data?
 2.  When Should I Generate Data?
