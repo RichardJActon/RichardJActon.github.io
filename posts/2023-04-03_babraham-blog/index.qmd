@@ -242,6 +242,7 @@ Here is my advice for people in various roles for using a mixture of carrots `r 
 -   Software Developers & IT Staff
     -   Build tools and systems which make the ingestion, annotation, sharing, accessing, and processing of data as intuitive, seamless and integrated a process as possible with open-source tools.
       -   (Don't develop a proprietary platform or product to try and solve these issue or people like me will tell others not to use it as the incentives don't line up with the degree of interoperability and portability needed in science. Go with an open-source business model that is compatible with the openness required by scientific process.)
+    -   Package your software so that it can easily be included in portable reproducible environments like Docker simply and declaratively.
 -   Peer Reviewers
     -   When you review things ask questions about reproducibility, and FAIR data. This is where the expectation of higher standards in this area can begin to be set. (If you get asked to review stuff a lot and would like to reduce incoming requests suddenly becoming a reproducibility nut might lighten your load)
 -   Journal Editors
