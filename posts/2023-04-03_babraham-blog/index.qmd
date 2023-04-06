@@ -60,7 +60,7 @@ Biology has a lot of inherent variability even when you are going to great lengt
 Analysing your data though, reproducing that should be easy right `r emo::ji("sunglasses")`?
 It's all on the computer you can just run the same thing again right `r emo::ji("pleading_face")`?
 Alas it is not as simple as you might think `r emo::ji("person_facepalming")`.
-It can take several months to reproduce a bioinformatic analysis in a published paper if it is possible at all Quantifying Reproducibility in Computational Biology: The Case of the Tuberculosis Drugome [@garijo2013].
+It can take several months to reproduce a bioinformatic analysis in a published paper if it is possible at all, see: "Quantifying Reproducibility in Computational Biology: The Case of the Tuberculosis Drugome" [@garijo2013].
 (Significant strides have been made in reproducible analysis since that paper was written but I've not found a more recent attempt to quantify the problem.)
 
 Why is this the case?
@@ -100,7 +100,7 @@ This is not always the most practical format of metadata for day-to-day use but 
 In this way components common to different domains can be re-used e.g. an agreed set of standard terms to refer to certain classes of things like cell-types or sequencing technologies so that we don't use different words for the same thing.
 For more on metadata standards checkout [the section in my book](https://hdbi.gitlab.io/data-management/hdbi-data-resource/01-what-constitutes-data.html#sec-metadata).
 
-One of the ways of thinking about making our data available for others to use, so that they can no only use it in their own work, but also check existing conclusions is based around the acronym FAIR:
+One of the ways of thinking about making our data available for others to use, so that they can not only use it in their own work, but also check existing conclusions is based around the acronym FAIR:
 
 #### FAIR (Findable, Accessible, Interoperable, Re-usable)
 
@@ -212,7 +212,7 @@ Here's a table fleshing out the analogy with some small examples of the sorts of
 
 :::
 
-When a protocol can't quite capture your bench work well enough that someone else could do your experiment if they read it then you can take the approach of [JoVE](https://www.jove.com/) (The Journal of Visualised Experiments). If that's a bit much the less formal approach is available, anyone with a smartphone or action camera can film their experimental work upload it to figshare and get a DOI to reference in a protocol on [protocols.io](https://www.protocols.io/) or in a paper. (Enlist the help of a student an alarming fraction of them are surprisingly capable videographers thanks to social media.)
+When a protocol can't quite capture your bench work well enough that someone else could do your experiment if they read it, then you can take the approach of [JoVE](https://www.jove.com/) (The Journal of Visualised Experiments). If that's a bit much the less formal approach is available, anyone with a smartphone or action camera can film their experimental work upload it to figshare and get a DOI to reference in a protocol on [protocols.io](https://www.protocols.io/) or in a paper. (Enlist the help of a student an alarming fraction of them are surprisingly capable videographers thanks to social media.)
 
 What does a 'computational environment' mean?
 When doing an analysis you don't re-implement all steps from scratch you use existing tools to perform many calculations, these in turn use other tools creating a 'tree' of 'dependencies'.
@@ -244,15 +244,16 @@ Here is my advice for people in various roles for using a mixture of carrots `r 
       -   (Don't develop a proprietary platform or product to try and solve these issue or people like me will tell others not to use it as the incentives don't line up with the degree of interoperability and portability needed in science. Go with an open-source business model that is compatible with the openness required by scientific process.)
     -   Package your software so that it can easily be included in portable reproducible environments like Docker simply and declaratively.
 -   Peer Reviewers
-    -   When you review things ask questions about reproducibility, and FAIR data. This is where the expectation of higher standards in this area can begin to be set. (If you get asked to review stuff a lot and would like to reduce incoming requests suddenly becoming a reproducibility nut might lighten your load)
+    -   When you review things ask questions about reproducibility, and FAIR data. This is where the expectation of higher standards in this area can begin to be set. (Also if you get asked to review stuff a lot and would like to reduce incoming requests suddenly becoming a reproducibility nut might lighten your load `r emo::ji("wink")`). If you are asking these questions in your reviews of papers it may clue editors in that academics now expect this and shape their decisions on what to put out for review in the first place.
 -   Journal Editors
-    -   If you are a journal editor and you are deciding between many good submissions make this a criterion for what you choose. If you are not asking these questions in your reviews of papers may clue editors in that academics now expect this and same their decisions on what to put out for review in the first place
+    -   If you are a journal editor and you are deciding between many good submissions make this a criterion for what you choose. 
 -   Grant Reviewers
-    -   If you review grants ask about peoples plans for making their data FAIR and their analyses reproducible. This will get them thinking about it well in advance and
+    -   If you review grants ask about peoples plans for making their data FAIR and their analyses reproducible. This will get them thinking about it well in advance and hopefully planning for it, especially if they think it might be the difference between getting funded or not.
 -   Press
-    -   If you are a member of the press or a popularise of science report favourably on publications that show their work and skeptically of those that don't
+    -   If you are a member of the press or a populariser of science, report favourably on publications that show their work and skeptically of those that don't.
+    -   Ask questions about reproducibility and openness when interviewing scientist and push university PR departments about these qualities in the papers they choose to make press releases about.
 -   Public *(also applies if you fall into any of the other categories)*
-    -   Ask your elected representative or the relevant minister (At time of writing [Michelle Donelan](https://www.gov.uk/government/people/michelle-donelan) Secretary of State for Science, Innovation and Technology) why the research councils aren't holding their grant awardees to a higher standard on reproducibility and FAIR date so the the best use can be made of public research funds?
+    -   Ask your elected representative or the relevant minister (At time of writing [Michelle Donelan](https://www.gov.uk/government/people/michelle-donelan) Secretary of State for Science, Innovation and Technology) why the research councils aren't holding their grant awardees to a higher standard on reproducibility and FAIR data so that the best use can be made of public research funds?
 
 ## Where Can I Start / Learn More?
 
