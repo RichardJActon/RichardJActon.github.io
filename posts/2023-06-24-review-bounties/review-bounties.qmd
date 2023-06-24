@@ -1,0 +1,106 @@
+---
+title: "Review Bounties"
+subtitle: "Fixing incentives in peer review"
+description: "A funding model to replace article processing charges (APCs), and subscriptions which pays reviewers and incentivises diligence with a 'bug bounty'."
+format: 
+  html: default 
+  docx: default
+knitr: true
+# image: HDBI-data-logo.svg
+date: "2023-06-24"
+author: 
+  - name: "Richard J. Acton"
+    orcid: 0000-0002-2574-9611
+categories: 
+  - publications
+  - literate science
+license: "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
+# bibliography: references.bib
+editor: visual
+---
+
+```{r setup}
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(ggplot2)
+})
+```
+
+
+In the classic 'closed' funding model for academic publishing you pay a subscription to a journal to access its contents.
+With the move to electronic formats the marginal cost of distribution dropped and the journals became less readily excludable.
+This change in technology and economics of the industry lead people to question the practices of publishers who still jealously defended their 'rights' to the contents of articles and charged for access.
+The open access movement mostly won with many journals now instead charging fees to authors in the event the journal decides to publish their work and openly licencing their content.
+
+These article processing charges (APCs) represent a clear conflict of interest 
+
+The journal provides
+
+- The administrative function of coordinating the review
+
+- There is a 'curatorial' function of dubious utility because of its biases and disproportionate impact on which papers
+
+The bulk of the most vaulable labour performed in this process is performed by the reviewers who are unpaid.
+
+```{r}
+GBPscalar <- function(x) {
+  pound2float <- sprintf("£ %.2f", x)
+  thousands_comma <- format(
+    as.integer(sub(
+      pattern = ".*?(\\d+)\\.\\d+", replacement = "\\1", pound2float
+    )),
+    big.mark = ","
+  )
+  sub(
+    pattern = "(.*?)\\d+(\\.\\d+)",
+    replacement = paste0("\\1",thousands_comma,"\\2"),
+    pound2float
+  )
+}
+
+GBP <- function(x) {
+  purrr::map_chr(x, GBPscalar)
+}
+
+# GBP(.34)
+# GBP(1234.34)
+# GBP(1234987.34)
+# GBP(1234987.34456)
+# GBP(1234987.3699)
+# GBP(1234987.36499)
+# GBP(1234987.3611)
+
+APC <- 3000
+
+parties <- c(
+  "'Editor'", "Reviewer 1", "Reviewer 2", "Reviewer 3", "Bug Bounty"
+)
+party_colours <-c("#7570B3", "#74C476", "#41AB5D", "#238B45", "#D95F02")
+names(party_colours) <- parties
+
+splits <- tibble(
+  Party = factor(parties, levels = parties, ordered = TRUE),
+  Split = c(14, 22, 22, 22, 20)
+) %>%
+  mutate(Amount = (Split/100) * APC)
+
+splits %>%
+  ggplot(aes("Party", Split, fill = Party)) + 
+  geom_bar(stat = "identity") + 
+  geom_text(
+    # aes(label = paste0(Split, "%")),
+    aes(label = paste0(Split, "%\n", GBP(Amount))),
+    position = position_stack(vjust = 0.5)
+  ) +
+  coord_polar("y", start = 0) + 
+  scale_fill_manual(values = party_colours) + 
+  theme_void() + 
+  labs(
+    title = "Example 'Review Bounty' Split",
+    subtitle = "Example of a £3,000 bounty / 'APC'"
+  )
+```
+
+
+
+
