@@ -1,0 +1,17 @@
+---
+title: Podcast appearance on aging biology
+description: "I made an appearance on the [bayesian conspiracy podcast](https://www.thebayesianconspiracy.com/2023/05/187-github-review-bounties-to-save-science-with-richard-acton/) to talk about fixing academic publishing."
+author: 
+  - name: "Richard J. Acton"
+    orcid: 0000-0002-2574-9611
+date: "2021-10-06"
+categories:
+  - rationalism
+  - podcasts
+  - literate science
+---
+
+![](../2021-10-06-bayesian-conspiracy-aging/cropped-TBC.png){width=180px}
+
+I made another appearance on the [bayesian conspiracy podcast](https://www.thebayesianconspiracy.com/2023/05/187-github-review-bounties-to-save-science-with-richard-acton/) to talk about the sorry state of academic publishing and some things we might be able to do to fix it including my concept of Review Bounties.
+
