@@ -41,8 +41,11 @@ Work
 Decentralised, end-2-end encrypted & anonymous
 
 
-{{< fa envelope >}} [Matrix](https://matrix.org/) ID: @richardjacton:matrix.org
+{{< fa envelope >}} [SimpleX](https://simplex.chat/contact#/?v=1-2&smp=smp%3A%2F%2F1OwYGt-yqOfe2IyVHhxz3ohqo3aCCMjtB-8wn4X_aoY%3D%40smp11.simplex.im%2FkD_TrZw4CJF4lmRG-RGJq65xk-KgaD9C%23%2F%3Fv%3D1-2%26dh%3DMCowBQYDK2VuAyEAP5Qcr7Osme3oe98wNDVgFyhNehi3p9OmhdCgbuNFRD8%253D%26srv%3D6ioorbm6i3yxmuoezrhjk6f6qgkc4syabh7m3so74xunb5nzr4pwgfqd.onion)
 
+![](img/PanNarrans-SimpleX-public.png) 
+
+{{< fa envelope >}} [Matrix](https://matrix.org/) ID: @richardjacton:matrix.org
 
 {{< fa envelope >}} [Session](https://getsession.org/) ID: 051ebba96a4e385f16de4c1de30829202be5bdb5f539d790c7bc3e9b763e34b83c
 
