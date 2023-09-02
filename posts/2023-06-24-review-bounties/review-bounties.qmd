@@ -17,6 +17,7 @@ categories:
 license: "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
 # bibliography: references.bib
 editor: visual
+draft: true
 ---
 
 ```{r setup}
@@ -28,18 +29,22 @@ suppressPackageStartupMessages({
 
 
 In the classic 'closed' funding model for academic publishing you pay a subscription to a journal to access its contents.
-With the move to electronic formats the marginal cost of distribution dropped and the journal articles became intangible goods as a such less readily excludable.
-Publishers still jealously defended their copyright on the contents of articles and charged a premium for access.
-
-The research sector had grown and their costs where no longer in printing and distribution but in handling the large number of sumbissions to prestigious journals now acting as *de facto* gate keepers of academic career progression. With very low costs and an effective monopoly & monopsony on the academic publishing market the publishing houses became immensly profitable arguably massively out of proportion to the value that they provide.
+With the move to electronic formats the marginal cost of distribution dropped and the journal articles became intangible goods, and as a such, less readily excludable.
+Publishers still jealously defended their copyright on the contents of articles and charged a premium for access - many still do.
+Though this became less as less viable as consumers of the academic literature developed more creative ways to express what they thought of the legitimacy of the journals' claim to the copyrights on those articles, prominantly sci-hub.
+The research sector had grown and the publishers' costs where no longer in printing and distribution but in handling the large number of sumbissions to prestigious journals now acting as *de facto* gate keepers of academic career progression.
+With very low costs and an effective monopoly & monopsony on the academic publishing market the publishing houses became immensly profitable, arguably massively out of proportion to the value that they provide.
+Research articles once produced are a public good, one person's use of them does not diminish their utility to anyone else and electronic files are inherently difficult to render excludable.
+Giving essentailly perpetual ownership of the copyright of knowledge commons to the academic publishers to extract rents on clearly creates perverse incentives and does not incentivise meaningful inovation in the sector - the purported purpose of the legal fiction of 'owning' intangibles of this kind.
+So called 'intellectual property' laws are completely broken - but this is out of scope for today's discussion.
 
 The open access movement questioned why public money was being spent buying back, at a substancial markup, the rights to view content paid for largely by public money in the first place.
+The efforts of researhcers and librarians to band together to acheive enough colletive power to renegociate their subscriptions whilst publically shaming the publishers for their extractive businnes practices saw a shift in strategy by the publishing industry.
+Open Access has *mostly* won with many journals now instead charging fees to authors in the event the journal decides to publish their work and openly licencing their content.
+These article processing charges (APCs) represent a clear conflict of interest, as has been seen in the rise of predatory & low quality 'pay-to-publish' 'journals'.
 
-research articles once produced are a public good, one person's use of them does not diminish their utility to anyone else and electronic files are inherently difficult to render excludable.
-
-mostly won with many journals now instead charging fees to authors in the event the journal decides to publish their work and openly licencing their content.
-
-These article processing charges (APCs) represent a clear conflict of interest 
+Diamond open access has lofty goals, most of which I'm entirely on board with, however in my view it lacks a model for appropriately remunerating the participants in the academic publishing market for their acctual costs and labour.
+There is legitimate added value in some of the conventional functions of the academic publishing industry and the people adding that value should be remunerated fairly for their labour.
 
 The 'journal' as currently constituted provides:
 
@@ -49,25 +54,28 @@ The 'journal' as currently constituted provides:
 - Proofreading & typesetting
 - Hosting the websites from which the papers are served
 
-
 - There is a 'curatorial' function of dubious utility because of its biases and the disproportionate impact these unaccountable bodies have on which papers gain prominance.
-  - Deciding which papers to 'bench reject' and which to send out for review
+  - Deciding which papers to 'bench reject' and which to send out for review is a dated and inadaquate approach to the curation problem anyway in my view.
 
 The bulk of the most vaulable labour performed in this process is performed by the reviewers who are unpaid.
+The rest of the labour and costs here simply detract from the bottom line of the publishers who because of the vertically integrated nature of the publsihing pipeline have little incentive to provide a high quality service in areas such proofreading.
+The bulk of the value acruces to the owners of the publshing companies who can extract rents on the copyrighted articles, and restrict access to artifically limited high presige publication space which they can charge to access via APCs.
+They pay their professional editors relatvely poorly, whilst expecting them to judge the quality of an unreasonablly large number of articles per unit time and according to dubious criteria.
+This leaves the door open to considerable corruption and gaming of this system.
 
 ## As an alternative to this way of working I propose 'review bounties'
 
+In it's simplest form it would look like this:
+
 >Instead of paying an article processing charge authors offer a review bounty. 
 >the 'Editor' of a journal agrees to mediate the review process for some fraction of the review bounty.
->A portion of the remaining bounty is divided among the reviewers of this paper, if the editor deems the review of succicient quality, according to clear indicated expectations of what is expected in a review. 
+>A portion of the remaining bounty is divided among the reviewers of this paper, if the editor deems the review of succicient quality, according to clearly indicated expectations of what constitutes a good qualtiy review. 
 >The remainder of the bounty is offered as a 'bug bounty' such that anyone identifying an error which materially alters a conclusion of the work can claim it.
 
-
-Bug bounty claims would be adjudicated by a prespecified procedure or rules for deciding if the claim is valid, for example:
+Bug bounty claims would be adjudicated by a pre-specified procedure or rules for deciding if the claim is valid, for example:
 
 - If the Authors agree
 - or if the editor and a majority of the reviewers agree, (editor breaks ties)
-
 
 
 ```{r}
@@ -129,9 +137,13 @@ splits %>%
   )
 ```
 
+Under this model the journal performs its conventional functions of aranging review and hosting / distributing the published paper but the reviewers get paid for their labour and an incentive is created to find errors in the published literature.
+The papers are published under an open license such as a CC-BY or (preferably in my view) CC-BY-SA so that they can become a part of the knowledge commons.
+This incentive structure encourages authors and reviewers to avoid errors in the first place as they are steaking some cash on the assertion that they have not made any errors whilst also incentivising 3rd parties to try and spot errors in the published literature
 
+# Extensions to the review bounty model
 
-# extensions
+In it's simplest form 'journal' combines a number of potential functions
 
 - Additional parties
   - Proofreaders & type-setters
@@ -140,3 +152,8 @@ splits %>%
 - Extened bounties from interested parties
   e.g. a pharma company is contempating starting a new program based on this work they can put a large bug bounty on it to try and attract additional 3rd party srcutiny and save them money on the long run from on investing in a dead end if an error is discovered early.
 - Grant award bodies could require minimum bug-bounty amounts / proportions to ensure that work theat they fund gets adaquate srcutiny
+
+# Integration into a larger picture of publication workflow reform
+
+
+
