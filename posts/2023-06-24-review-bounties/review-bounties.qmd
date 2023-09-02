@@ -1,0 +1,142 @@
+---
+title: "Review Bounties"
+subtitle: "Fixing incentives in peer review"
+description: "A funding model to replace article processing charges (APCs), and subscriptions which pays reviewers and incentivises diligence with a 'bug bounty'."
+format: 
+  html: default 
+  docx: default
+knitr: true
+# image: HDBI-data-logo.svg
+date: "2023-06-24"
+author: 
+  - name: "Richard J. Acton"
+    orcid: 0000-0002-2574-9611
+categories: 
+  - publications
+  - literate science
+license: "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
+# bibliography: references.bib
+editor: visual
+---
+
+```{r setup}
+suppressPackageStartupMessages({
+  library(dplyr)
+  library(ggplot2)
+})
+```
+
+
+In the classic 'closed' funding model for academic publishing you pay a subscription to a journal to access its contents.
+With the move to electronic formats the marginal cost of distribution dropped and the journal articles became intangible goods as a such less readily excludable.
+Publishers still jealously defended their copyright on the contents of articles and charged a premium for access.
+
+The research sector had grown and their costs where no longer in printing and distribution but in handling the large number of sumbissions to prestigious journals now acting as *de facto* gate keepers of academic career progression. With very low costs and an effective monopoly & monopsony on the academic publishing market the publishing houses became immensly profitable arguably massively out of proportion to the value that they provide.
+
+The open access movement questioned why public money was being spent buying back, at a substancial markup, the rights to view content paid for largely by public money in the first place.
+
+research articles once produced are a public good, one person's use of them does not diminish their utility to anyone else and electronic files are inherently difficult to render excludable.
+
+mostly won with many journals now instead charging fees to authors in the event the journal decides to publish their work and openly licencing their content.
+
+These article processing charges (APCs) represent a clear conflict of interest 
+
+The 'journal' as currently constituted provides:
+
+- The administrative functions of coordinating the review
+  - Finding, vetting, & corralling, suitable reviewers
+  - coordinating the correspondence with authors
+- Proofreading & typesetting
+- Hosting the websites from which the papers are served
+
+
+- There is a 'curatorial' function of dubious utility because of its biases and the disproportionate impact these unaccountable bodies have on which papers gain prominance.
+  - Deciding which papers to 'bench reject' and which to send out for review
+
+The bulk of the most vaulable labour performed in this process is performed by the reviewers who are unpaid.
+
+## As an alternative to this way of working I propose 'review bounties'
+
+>Instead of paying an article processing charge authors offer a review bounty. 
+>the 'Editor' of a journal agrees to mediate the review process for some fraction of the review bounty.
+>A portion of the remaining bounty is divided among the reviewers of this paper, if the editor deems the review of succicient quality, according to clear indicated expectations of what is expected in a review. 
+>The remainder of the bounty is offered as a 'bug bounty' such that anyone identifying an error which materially alters a conclusion of the work can claim it.
+
+
+Bug bounty claims would be adjudicated by a prespecified procedure or rules for deciding if the claim is valid, for example:
+
+- If the Authors agree
+- or if the editor and a majority of the reviewers agree, (editor breaks ties)
+
+
+
+```{r}
+GBPscalar <- function(x) {
+  pound2float <- sprintf("£ %.2f", x)
+  thousands_comma <- format(
+    as.integer(sub(
+      pattern = ".*?(\\d+)\\.\\d+", replacement = "\\1", pound2float
+    )),
+    big.mark = ","
+  )
+  sub(
+    pattern = "(.*?)\\d+(\\.\\d+)",
+    replacement = paste0("\\1",thousands_comma,"\\2"),
+    pound2float
+  )
+}
+
+GBP <- function(x) {
+  purrr::map_chr(x, GBPscalar)
+}
+
+# GBP(.34)
+# GBP(1234.34)
+# GBP(1234987.34)
+# GBP(1234987.34456)
+# GBP(1234987.3699)
+# GBP(1234987.36499)
+# GBP(1234987.3611)
+
+APC <- 3000
+
+parties <- c(
+  "'Editor'", "Reviewer 1", "Reviewer 2", "Reviewer 3", "Bug Bounty"
+)
+party_colours <-c("#7570B3", "#74C476", "#41AB5D", "#238B45", "#D95F02")
+names(party_colours) <- parties
+
+splits <- tibble(
+  Party = factor(parties, levels = parties, ordered = TRUE),
+  Split = c(14, 22, 22, 22, 20)
+) %>%
+  mutate(Amount = (Split/100) * APC)
+
+splits %>%
+  ggplot(aes("Party", Split, fill = Party)) + 
+  geom_bar(stat = "identity") + 
+  geom_text(
+    # aes(label = paste0(Split, "%")),
+    aes(label = paste0(Split, "%\n", GBP(Amount))),
+    position = position_stack(vjust = 0.5)
+  ) +
+  coord_polar("y", start = 0) + 
+  scale_fill_manual(values = party_colours) + 
+  theme_void() + 
+  labs(
+    title = "Example 'Review Bounty' Split",
+    subtitle = "Example of a £3,000 bounty / 'APC'"
+  )
+```
+
+
+
+# extensions
+
+- Additional parties
+  - Proofreaders & type-setters
+    Instead of having a journal do this in house they could directly be in on the bounty cut
+  - Hosting, host of sites for servering publications, and services for administering their publication could also be directly included, especially in a context where journals are no longer as relevant and publications might be shared independently of them.
+- Extened bounties from interested parties
+  e.g. a pharma company is contempating starting a new program based on this work they can put a large bug bounty on it to try and attract additional 3rd party srcutiny and save them money on the long run from on investing in a dead end if an error is discovered early.
+- Grant award bodies could require minimum bug-bounty amounts / proportions to ensure that work theat they fund gets adaquate srcutiny
