@@ -12,6 +12,8 @@ categories:
 
 ![brain-1 icon by Servier https://smart.servier.com/ is licensed under CC-BY 3.0 Unported https://creativecommons.org/licenses/by/3.0/](brain-1.svg){width=180px}
 
+LAST UPDATED: 2023-09-22 (see this files history in the [repo](https://gitlab.renkulab.io/racton/pan-narrans-blog/-/commits/master/posts/2022-06-12-FLOSS-exobrain-braindump))
+
 I set myself the constraint of using of Free/Libre and open source (FLOSS) software tools for the task of creating an exobrain. 
 
 Here are some of the tool's I've considered and in some case am using to do this. First Why  did I impose this constraint? I regard it as as an essential feature of a exobrain that it can be private, secure and will always accessible to me in an open an interoperable format into the future. This way you can own the data in your exobrain and still have access to it if the company that makes the product/service that you are using goes out of business. I have philosophical and ethical problems with proprietary software (see: [GNU philosophy](https://www.gnu.org/philosophy/)) & consider a right to privacy to be of fundamental political importance (see: [Privacy is Power](https://openlibrary.org/works/OL24353841W/Privacy_is_Power).
@@ -45,11 +47,12 @@ These are tools which facilitate building an exobrain on your own private cloud 
 	- [Carnet](https://apps.nextcloud.com/apps/carnet) a google keep-like Nextcloud note app 
 	- **[Joplin](https://joplinapp.org/)** - markdown based notes app (web/desktop/mobile), cloud hosted option or many other could sync options including nextcloud, quick grab browser plugins
 	- [tiddlywiki](https://tiddlywiki.com/index.html) A non-linear personal notebook in the form of a WIKI, local or hostable
-	- [focalboard](https://www.focalboard.com/) notion-like
+	- [focalboard](https://www.focalboard.com/) notion-like, same dev as mattermost
 	- [appflowy](https://appflowy.io/) notion-like
 	- [standard notes](https://standardnotes.com) notion-like, open? but with paid option that has annoying up-sells?
-	- [notesnook](https://notesnook.com) went open not originally so, not sure if server is? 
-	- [AFFiNE](https://affine.pro/) notion-like, some interesting UI innovations
+	- [notesnook](https://notesnook.com) went open not originally so, open server is in the roadmap - we'll see
+	- [AFFiNE](https://affine.pro/) monday / notion-like, some interesting UI innovations, (MIT client, source available server)
+	- [anytype](https://anytype.io/) - notion-like source available
 	- [trilium](https://github.com/zadam/trilium/wiki) extensible scriptable ans customisable notes apps with md, freehand drawing, latex, mermaid etc.
 	- [zettlr](https://zettlr.com) MD editor with Zotero integration pandoc document export.
 	- [QownNotes](https://qownnotes.org) Simple MD notes with tagging in the QT framwork
@@ -94,10 +97,13 @@ These are tools which facilitate building an exobrain on your own private cloud 
 	- Element (and other matrix protocol apps) - operates a federated server model, **encryption is not required by the protocol**
 		- [Element](https://element.io/) - somewhat discord like in it's community and group features
 		- Coming soon to the matrix protocol is [RocketChat](https://rocket.chat/) and excellent mature slack alternative
+	- [Zulip](https://zulip.com/) - highly performant team chat app replacement for slack, teams etc.
+	- [simpleX](https://simplex.chat/) - messenger with no fixed user ID and a decentralsied newtork
 	- [Session](https://getsession.org/) - a Signal fork with no need to phone number, blockchain based global unique identifiers
 	- [Briar](https://briarproject.org/) XMPP protocol based with local mesh network options over wifi/bluetooth when cellular networks are unavailable - good for disasters when infrastructure might be down
 - Side note on Phone security
 	- Phone security is particularly challenging right now, there are no truely good options which do not entail significant functionality compromise. Hardware wise nothing ideal exists, what would be desirable is a phone with hardware dip switches which physically disconnect the wi-fi/bluetooth, cellular modem, camera & microphone as well as having a removable battery, an eSIM and a re-lockable boot-loader. Many phones running a mainline linux kernel still lack or have buggy basic functionality though android app emulation options are improving with the waydroid project.
+		- [GrapheneOS](https://grapheneos.org/) probably the best secure degoogled android option, limited to google pixel hardward for the secure bootloader functionality, good profiles system that will allow you to install google play services if you need it but with limited privledges instead of their default system level access
 		- [calyxOS](https://calyxos.org/) is among my prefered de-googled android options, but limited to specific hardware mainly google pixel phones
 		- [Lineage OS](https://lineageos.org/) is less hardcore and will permit you to have a minimum viable google services option and work if you don't have a locked boot-loader, available on many more handsets
 	- [silent-link](https://silent.link/) will permit you to acquire an anonymous phone number which can be used with your calyxOS phone with an eSIM This number is **data only or SMS and inbound voice only, NO OUTBOUND CALLS** It should be used in conjunction with a VOIP service for all actual calls. It can be paid for anonymously with monero.
