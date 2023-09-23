@@ -17,34 +17,10 @@ categories:
 license: "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/)"
 # bibliography: references.bib
 editor: visual
-draft: true
+draft: false
 ---
 
-```{r setup}
-suppressPackageStartupMessages({
-  library(dplyr)
-  library(ggplot2)
-})
-```
-
-
-In the classic 'closed' funding model for academic publishing you pay a subscription to a journal to access its contents.
-With the move to electronic formats the marginal cost of distribution dropped and the journal articles became intangible goods, and as a such, less readily excludable.
-Publishers still jealously defended their copyright on the contents of articles and charged a premium for access - many still do.
-Though this became less as less viable as consumers of the academic literature developed more creative ways to express what they thought of the legitimacy of the journals' claim to the copyrights on those articles, prominantly sci-hub.
-The research sector had grown and the publishers' costs where no longer in printing and distribution but in handling the large number of sumbissions to prestigious journals now acting as *de facto* gate keepers of academic career progression.
-With very low costs and an effective monopoly & monopsony on the academic publishing market the publishing houses became immensly profitable, arguably massively out of proportion to the value that they provide.
-Research articles once produced are a public good, one person's use of them does not diminish their utility to anyone else and electronic files are inherently difficult to render excludable.
-Giving essentailly perpetual ownership of the copyright of knowledge commons to the academic publishers to extract rents on clearly creates perverse incentives and does not incentivise meaningful inovation in the sector - the purported purpose of the legal fiction of 'owning' intangibles of this kind.
-So called 'intellectual property' laws are completely broken - but this is out of scope for today's discussion.
-
-The open access movement questioned why public money was being spent buying back, at a substancial markup, the rights to view content paid for largely by public money in the first place.
-The efforts of researhcers and librarians to band together to acheive enough colletive power to renegociate their subscriptions whilst publically shaming the publishers for their extractive businnes practices saw a shift in strategy by the publishing industry.
-Open Access has *mostly* won with many journals now instead charging fees to authors in the event the journal decides to publish their work and openly licencing their content.
-These article processing charges (APCs) represent a clear conflict of interest, as has been seen in the rise of predatory & low quality 'pay-to-publish' 'journals'.
-
-Diamond open access has lofty goals, most of which I'm entirely on board with, however in my view it lacks a model for appropriately remunerating the participants in the academic publishing market for their acctual costs and labour.
-There is legitimate added value in some of the conventional functions of the academic publishing industry and the people adding that value should be remunerated fairly for their labour.
+There is legitimate added value in *some* of the conventional functions of the academic publishing industry and the people adding that value should be remunerated fairly for their labour.
 
 The 'journal' as currently constituted provides:
 
@@ -77,71 +53,11 @@ Bug bounty claims would be adjudicated by a pre-specified procedure or rules for
 - If the Authors agree
 - or if the editor and a majority of the reviewers agree, (editor breaks ties)
 
-
-```{r}
-GBPscalar <- function(x) {
-  pound2float <- sprintf("£ %.2f", x)
-  thousands_comma <- format(
-    as.integer(sub(
-      pattern = ".*?(\\d+)\\.\\d+", replacement = "\\1", pound2float
-    )),
-    big.mark = ","
-  )
-  sub(
-    pattern = "(.*?)\\d+(\\.\\d+)",
-    replacement = paste0("\\1",thousands_comma,"\\2"),
-    pound2float
-  )
-}
-
-GBP <- function(x) {
-  purrr::map_chr(x, GBPscalar)
-}
-
-# GBP(.34)
-# GBP(1234.34)
-# GBP(1234987.34)
-# GBP(1234987.34456)
-# GBP(1234987.3699)
-# GBP(1234987.36499)
-# GBP(1234987.3611)
-
-APC <- 3000
-
-parties <- c(
-  "'Editor'", "Reviewer 1", "Reviewer 2", "Reviewer 3", "Bug Bounty"
-)
-party_colours <-c("#7570B3", "#74C476", "#41AB5D", "#238B45", "#D95F02")
-names(party_colours) <- parties
-
-splits <- tibble(
-  Party = factor(parties, levels = parties, ordered = TRUE),
-  Split = c(14, 22, 22, 22, 20)
-) %>%
-  mutate(Amount = (Split/100) * APC)
-
-splits %>%
-  ggplot(aes("Party", Split, fill = Party)) + 
-  geom_bar(stat = "identity") + 
-  geom_text(
-    # aes(label = paste0(Split, "%")),
-    aes(label = paste0(Split, "%\n", GBP(Amount))),
-    position = position_stack(vjust = 0.5)
-  ) +
-  coord_polar("y", start = 0) + 
-  scale_fill_manual(values = party_colours) + 
-  theme_void() + 
-  labs(
-    title = "Example 'Review Bounty' Split",
-    subtitle = "Example of a £3,000 bounty / 'APC'"
-  )
-```
-
 Under this model the journal performs its conventional functions of aranging review and hosting / distributing the published paper but the reviewers get paid for their labour and an incentive is created to find errors in the published literature.
 The papers are published under an open license such as a CC-BY or (preferably in my view) CC-BY-SA so that they can become a part of the knowledge commons.
-This incentive structure encourages authors and reviewers to avoid errors in the first place as they are steaking some cash on the assertion that they have not made any errors whilst also incentivising 3rd parties to try and spot errors in the published literature
+This incentive structure encourages authors and reviewers to avoid errors in the first place as they are staking some cash on the assertion that they have not made any errors whilst also incentivising 3rd parties to try and spot errors in the published literature
 
-# Extensions to the review bounty model
+## Extensions to the review bounty model
 
 In it's simplest form 'journal' combines a number of potential functions
 
@@ -153,7 +69,7 @@ In it's simplest form 'journal' combines a number of potential functions
   e.g. a pharma company is contempating starting a new program based on this work they can put a large bug bounty on it to try and attract additional 3rd party srcutiny and save them money on the long run from on investing in a dead end if an error is discovered early.
 - Grant award bodies could require minimum bug-bounty amounts / proportions to ensure that work theat they fund gets adaquate srcutiny
 
-# Integration into a larger picture of publication workflow reform
+## Integration into a larger picture of publication workflow reform
 
-
+This proposal forms a part of a larger set of reforms to the conventional publishing model that I will be writing about here under the heading [literate science](https://blog.pan-narrans.xyz/#category=literate%20science)
 
